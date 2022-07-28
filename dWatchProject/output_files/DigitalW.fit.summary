@@ -1,0 +1,16 @@
+Fitter Status : Successful - Tue Nov 23 21:14:35 2021
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Revision Name : DigitalW
+Top-level Entity Name : DigitalW
+Family : Cyclone IV E
+Device : EP4CE10E22C6
+Timing Models : Final
+Total logic elements : 5,633 / 10,320 ( 55 % )
+    Total combinational functions : 5,624 / 10,320 ( 54 % )
+    Dedicated logic registers : 194 / 10,320 ( 2 % )
+Total registers : 194
+Total pins : 47 / 92 ( 51 % )
+Total virtual pins : 0
+Total memory bits : 0 / 423,936 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 46 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )

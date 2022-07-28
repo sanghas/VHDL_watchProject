@@ -1,0 +1,24 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity Comparator is
+	generic( bits : integer);
+	port(
+		In1, In2 : in std_logic_vector (bits downto 0);
+		comp : out std_logic
+		);
+end Comparator;
+
+architecture comparison of Comparator is
+begin
+process(In1, In2)
+variable com : std_logic;
+begin
+	if(In1= In2) then
+		com := '1';
+	else
+		com := '0';
+	end if;
+	comp <= com;
+end process;
+end comparison;

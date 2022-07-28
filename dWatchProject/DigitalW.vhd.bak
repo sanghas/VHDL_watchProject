@@ -1,0 +1,37 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity DigitalW is
+port(
+	clk : in std_logic;		-- 2MHz
+	clk_1sec : out std_logic;	-- T = 1sec clk 1M
+	clk_10ms	: out std_logic;	-- T = 10ms clk 1M/100
+	clk_50ms : out std_logic	-- T = 50ms	clk 1M*5/100 
+	);
+end DigitalW;
+
+architecture Generator of DigitalW is
+begin
+process(clk)
+variable c_50ms, c_10ms, c_1sec : std_logic := '0';
+variable cnt : integer := 0;
+begin 
+	if(rising_edge(clk)) then
+		cnt := cnt+1;
+		if(cnt mod 10000 = 0)	then
+			c_10ms := not c_10ms;
+		end if;
+		if(cnt mod 50000 = 0)	then
+			c_50ms := not c_50ms;
+		end if;
+		if(cnt mod 1000000 = 0)	then
+			c_1sec := not c_1sec;
+			cnt := 0;
+		end if;
+		clk_1sec <= c_1sec;
+		clk_10ms <= c_10ms;
+		clk_50ms <= c_50ms;
+	end if;
+end process;
+end Generator;
+ 

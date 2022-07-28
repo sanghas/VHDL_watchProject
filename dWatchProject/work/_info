@@ -1,0 +1,985 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/dnf12/Desktop/dWatchProject
+Eclk_gen
+Z1 w1637477292
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 358
+R0
+Z4 8C:/Users/dnf12/Desktop/dWatchProject/Clk_gen.vhd
+Z5 FC:/Users/dnf12/Desktop/dWatchProject/Clk_gen.vhd
+l0
+L4 1
+V7WCnczRJM<^[BOPheS6Sj1
+!s100 iROUMbLLlD[G8U2KB6IDU3
+Z6 OV;C;2020.1;71
+32
+Z7 !s110 1637570489
+!i10b 1
+Z8 !s108 1637570489.000000
+Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/dnf12/Desktop/dWatchProject/Clk_gen.vhd|
+Z10 !s107 C:/Users/dnf12/Desktop/dWatchProject/Clk_gen.vhd|
+!i113 1
+Z11 o-work work -2002 -explicit
+Z12 tExplicit 1 CvgOpt 0
+Agenerator
+R2
+R3
+DEx4 work 7 clk_gen 0 22 7WCnczRJM<^[BOPheS6Sj1
+!i122 358
+l20
+L14 13
+V;k2]dhMk9:Tm51:J@GmKf1
+!s100 ?19239clnci2<D^[kX9602
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Eclk_gen_tb
+Z13 w1637372543
+R2
+R3
+!i122 359
+R0
+Z14 8C:/Users/dnf12/Desktop/dWatchProject/Clk_gen_tb.vhd
+Z15 FC:/Users/dnf12/Desktop/dWatchProject/Clk_gen_tb.vhd
+l0
+L4 1
+V?FCeABgA;9GVd4WG5P1Qi1
+!s100 ]cZU3d=eb61TSaBb`YAMM1
+R6
+32
+R7
+!i10b 1
+R8
+Z16 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/dnf12/Desktop/dWatchProject/Clk_gen_tb.vhd|
+Z17 !s107 C:/Users/dnf12/Desktop/dWatchProject/Clk_gen_tb.vhd|
+!i113 1
+R11
+R12
+Atb
+R2
+R3
+DEx4 work 10 clk_gen_tb 0 22 ?FCeABgA;9GVd4WG5P1Qi1
+!i122 359
+l21
+L7 25
+VX0Wm0kIUl2BgU8cM5G5^A1
+!s100 0XPFAKJ<Q^<cN6`9l9a[_1
+R6
+32
+R7
+!i10b 1
+R8
+R16
+R17
+!i113 1
+R11
+R12
+Ecomparator
+Z18 w1637477933
+R2
+R3
+!i122 360
+R0
+Z19 8C:/Users/dnf12/Desktop/dWatchProject/Comparator.vhd
+Z20 FC:/Users/dnf12/Desktop/dWatchProject/Comparator.vhd
+l0
+L4 1
+VnC:J5dJT:7FG3gdDem7=^0
+!s100 =[fMM]SA9D?X@>@VKUXU71
+R6
+32
+Z21 !s110 1637570490
+!i10b 1
+R8
+Z22 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/dnf12/Desktop/dWatchProject/Comparator.vhd|
+Z23 !s107 C:/Users/dnf12/Desktop/dWatchProject/Comparator.vhd|
+!i113 1
+R11
+R12
+Acomparison
+R2
+R3
+DEx4 work 10 comparator 0 22 nC:J5dJT:7FG3gdDem7=^0
+!i122 360
+l14
+Z24 L13 13
+VCHMLiD<3lUcVKc6Pjn54[0
+!s100 V8[K76<?2D2U=9UGVbQDi0
+R6
+32
+R21
+!i10b 1
+R8
+R22
+R23
+!i113 1
+R11
+R12
+Edebounce
+Z25 w1637477446
+R2
+R3
+!i122 361
+R0
+Z26 8C:/Users/dnf12/Desktop/dWatchProject/DeBounce.vhd
+Z27 FC:/Users/dnf12/Desktop/dWatchProject/DeBounce.vhd
+l0
+L4 1
+VkZWXNE[7jcaNYGkjfbZm10
+!s100 BojAzIeSKEjH?fcZ2dUUe0
+R6
+32
+R21
+!i10b 1
+Z28 !s108 1637570490.000000
+Z29 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/dnf12/Desktop/dWatchProject/DeBounce.vhd|
+Z30 !s107 C:/Users/dnf12/Desktop/dWatchProject/DeBounce.vhd|
+!i113 1
+R11
+R12
+Adff
+R2
+R3
+DEx4 work 8 debounce 0 22 kZWXNE[7jcaNYGkjfbZm10
+!i122 361
+l13
+Z31 L12 11
+Vi[:^P[@<D;5^oJhM@iNgn3
+!s100 @WZPC>AmWXhR1GHkP8bEK3
+R6
+32
+R21
+!i10b 1
+R28
+R29
+R30
+!i113 1
+R11
+R12
+Edecoder2to4
+Z32 w1637390082
+R2
+R3
+!i122 363
+R0
+Z33 8C:/Users/dnf12/Desktop/dWatchProject/decoder2to4.vhd
+Z34 FC:/Users/dnf12/Desktop/dWatchProject/decoder2to4.vhd
+l0
+L4 1
+VZz`R2W6GjEN<7K==8efO71
+!s100 YRUKKn=J7HfKk2kkY;iX92
+R6
+32
+R21
+!i10b 1
+R28
+Z35 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/dnf12/Desktop/dWatchProject/decoder2to4.vhd|
+Z36 !s107 C:/Users/dnf12/Desktop/dWatchProject/decoder2to4.vhd|
+!i113 1
+R11
+R12
+Adecode
+R2
+R3
+DEx4 work 11 decoder2to4 0 22 Zz`R2W6GjEN<7K==8efO71
+!i122 363
+l12
+L11 7
+V6=jCh9;^mU5EIST5_[=EF0
+!s100 akoTFbnG6^6Jdih7_8hKS2
+R6
+32
+R21
+!i10b 1
+R28
+R35
+R36
+!i113 1
+R11
+R12
+Edecoder_block
+Z37 w1637570937
+R2
+R3
+!i122 380
+R0
+Z38 8C:/Users/dnf12/Desktop/dWatchProject/Decoder_Block.vhd
+Z39 FC:/Users/dnf12/Desktop/dWatchProject/Decoder_Block.vhd
+l0
+L4 1
+V=8PPBO22AWToTbW6Q3C8j2
+!s100 TfC>bz;k`=eXEPN3^OWCi1
+R6
+32
+Z40 !s110 1637631795
+!i10b 1
+Z41 !s108 1637631795.000000
+Z42 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/dnf12/Desktop/dWatchProject/Decoder_Block.vhd|
+Z43 !s107 C:/Users/dnf12/Desktop/dWatchProject/Decoder_Block.vhd|
+!i113 1
+R11
+R12
+Adecoder
+R2
+R3
+DEx4 work 13 decoder_block 0 22 =8PPBO22AWToTbW6Q3C8j2
+!i122 380
+l20
+L11 24
+V>3FF5YK6YUi:`hS028dOd0
+!s100 oYonSEd>eA[_CM0TdP[SE3
+R6
+32
+R40
+!i10b 1
+R41
+R42
+R43
+!i113 1
+R11
+R12
+Edecoderntom
+Z44 w1637305692
+Z45 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z46 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z47 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+R2
+R3
+!i122 218
+R0
+Z48 8C:/Users/dnf12/Desktop/dWatchProject/decoderNtoM.vhd
+Z49 FC:/Users/dnf12/Desktop/dWatchProject/decoderNtoM.vhd
+l0
+L6 1
+VVG@UIU1l_W[B0Vai;TI5R3
+!s100 SSN__1T5V=G?6SYOh=o5X2
+R6
+32
+Z50 !s110 1637330764
+!i10b 1
+Z51 !s108 1637330764.000000
+Z52 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/dnf12/Desktop/dWatchProject/decoderNtoM.vhd|
+Z53 !s107 C:/Users/dnf12/Desktop/dWatchProject/decoderNtoM.vhd|
+!i113 1
+R11
+R12
+Asel_val
+R45
+R46
+R47
+R2
+R3
+DEx4 work 11 decoderntom 0 22 VG@UIU1l_W[B0Vai;TI5R3
+!i122 218
+l15
+L13 12
+V19RBz689zIU@X:VL=IRRN0
+!s100 a46@:zW@AT@@FS[0RIF4N1
+R6
+32
+R50
+!i10b 1
+R51
+R52
+R53
+!i113 1
+R11
+R12
+Edigitalw
+Z54 w1637632746
+Z55 DPx4 work 17 dwatch_components 0 22 >REm4<l`1jM?7:m0nnNbn2
+R45
+R46
+R47
+R2
+R3
+!i122 391
+R0
+Z56 8C:/Users/dnf12/Desktop/dWatchProject/DigitalW.vhd
+Z57 FC:/Users/dnf12/Desktop/dWatchProject/DigitalW.vhd
+l0
+L6 1
+VI0_a254a>nDdaPcIV;52A2
+!s100 <lS;@=iNL7;hT9m3nk_VD2
+R6
+32
+Z58 !s110 1637632752
+!i10b 1
+Z59 !s108 1637632752.000000
+Z60 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/dnf12/Desktop/dWatchProject/DigitalW.vhd|
+Z61 !s107 C:/Users/dnf12/Desktop/dWatchProject/DigitalW.vhd|
+!i113 1
+R11
+R12
+Artl
+R55
+R45
+R46
+R47
+R2
+R3
+DEx4 work 8 digitalw 0 22 I0_a254a>nDdaPcIV;52A2
+!i122 391
+l26
+L13 47
+Vn[JKZQX76a36MPhRaMdd10
+!s100 fA@R]<MZRH<8M0lIb9E>63
+R6
+32
+R58
+!i10b 1
+R59
+R60
+R61
+!i113 1
+R11
+R12
+Pdwatch_components
+R2
+R3
+!i122 392
+w1637632454
+R0
+8C:/Users/dnf12/Desktop/dWatchProject/dWatch_components.vhd
+FC:/Users/dnf12/Desktop/dWatchProject/dWatch_components.vhd
+l0
+L5 1
+V>REm4<l`1jM?7:m0nnNbn2
+!s100 0SBJm81=8Y;InTF<hia7P0
+R6
+32
+!s110 1637632753
+!i10b 1
+!s108 1637632753.000000
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/dnf12/Desktop/dWatchProject/dWatch_components.vhd|
+!s107 C:/Users/dnf12/Desktop/dWatchProject/dWatch_components.vhd|
+!i113 1
+R11
+R12
+Edwatch_tb
+Z62 w1637631779
+R2
+R3
+!i122 381
+R0
+Z63 8C:/Users/dnf12/Desktop/dWatchProject/dwatch_tb.vhd
+Z64 FC:/Users/dnf12/Desktop/dWatchProject/dwatch_tb.vhd
+l0
+L4 1
+VShINN0dVZ39d`I;ii`J<D2
+!s100 hfPH4>7Fh_Y5ZAES?Va332
+R6
+32
+R40
+!i10b 1
+R41
+Z65 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/dnf12/Desktop/dWatchProject/dwatch_tb.vhd|
+Z66 !s107 C:/Users/dnf12/Desktop/dWatchProject/dwatch_tb.vhd|
+!i113 1
+R11
+R12
+Atb
+R2
+R3
+DEx4 work 9 dwatch_tb 0 22 ShINN0dVZ39d`I;ii`J<D2
+!i122 381
+l21
+L7 101
+VmAI>i`V?f[>:2][GQj8`S0
+!s100 fkMNBPj;G:o36g>lXXPRV1
+R6
+32
+R40
+!i10b 1
+R41
+R65
+R66
+!i113 1
+R11
+R12
+Ekey_seq_gen
+Z67 w1637475674
+R2
+R3
+!i122 367
+R0
+Z68 8C:/Users/dnf12/Desktop/dWatchProject/Key_Seq_Gen.vhd
+Z69 FC:/Users/dnf12/Desktop/dWatchProject/Key_Seq_Gen.vhd
+l0
+L4 1
+VLjhMGVABMf761[MFY8?0T0
+!s100 `DGejZ3aB]dK5:;W1DNlJ0
+R6
+32
+Z70 !s110 1637570491
+!i10b 1
+Z71 !s108 1637570491.000000
+Z72 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/dnf12/Desktop/dWatchProject/Key_Seq_Gen.vhd|
+Z73 !s107 C:/Users/dnf12/Desktop/dWatchProject/Key_Seq_Gen.vhd|
+!i113 1
+R11
+R12
+Aset
+R2
+R3
+DEx4 work 11 key_seq_gen 0 22 LjhMGVABMf761[MFY8?0T0
+!i122 367
+l13
+L12 29
+VgF2hK;^hKHVXkDQX54T;U2
+!s100 gCibSHBXkckJQh22onYEK3
+R6
+32
+R70
+!i10b 1
+R71
+R72
+R73
+!i113 1
+R11
+R12
+Emux2to1_nbits
+Z74 w1637570936
+R2
+R3
+!i122 382
+R0
+Z75 8C:/Users/dnf12/Desktop/dWatchProject/MUX2to1_Nbits.vhd
+Z76 FC:/Users/dnf12/Desktop/dWatchProject/MUX2to1_Nbits.vhd
+l0
+L5 1
+VnF6FHg=goEhJ0zV=S[OO]1
+!s100 lTh;DmdTT9HD:L9L]EX?l2
+R6
+32
+Z77 !s110 1637631796
+!i10b 1
+Z78 !s108 1637631796.000000
+Z79 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/dnf12/Desktop/dWatchProject/MUX2to1_Nbits.vhd|
+Z80 !s107 C:/Users/dnf12/Desktop/dWatchProject/MUX2to1_Nbits.vhd|
+!i113 1
+R11
+R12
+Asel
+R2
+R3
+DEx4 work 13 mux2to1_nbits 0 22 nF6FHg=goEhJ0zV=S[OO]1
+!i122 382
+l13
+R31
+V4bTfkRcCdNb?zDC>?;:102
+!s100 `cAfXeBd1LVKlgb7EH2^K1
+R6
+32
+R77
+!i10b 1
+R78
+R79
+R80
+!i113 1
+R11
+R12
+Emux_4to1_24bit
+R74
+R2
+R3
+!i122 383
+R0
+Z81 8C:/Users/dnf12/Desktop/dWatchProject/MUX4to1_24bit.vhd
+Z82 FC:/Users/dnf12/Desktop/dWatchProject/MUX4to1_24bit.vhd
+l0
+L4 1
+VgaGg5^NdEdmASYP`F0PoC0
+!s100 d[e<1hEd2Z5G4H<kD4QDX0
+R6
+32
+R77
+!i10b 1
+R78
+Z83 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/dnf12/Desktop/dWatchProject/MUX4to1_24bit.vhd|
+Z84 !s107 C:/Users/dnf12/Desktop/dWatchProject/MUX4to1_24bit.vhd|
+!i113 1
+R11
+R12
+Aselec
+R2
+R3
+DEx4 work 14 mux_4to1_24bit 0 22 gaGg5^NdEdmASYP`F0PoC0
+!i122 383
+l21
+R24
+VIUA_BE=jUQO0JK:OEi^aR3
+!s100 8mVIWUfgC@[TdEN_7lRg63
+R6
+32
+R77
+!i10b 1
+R78
+R83
+R84
+!i113 1
+R11
+R12
+Emuxnto1_kbits
+Z85 w1637318224
+R45
+R46
+R47
+R2
+R3
+!i122 370
+R0
+Z86 8C:/Users/dnf12/Desktop/dWatchProject/MUXNto1_Kbits.vhd
+Z87 FC:/Users/dnf12/Desktop/dWatchProject/MUXNto1_Kbits.vhd
+l0
+L7 1
+Vjm^Ia9SImlBg5h<NEKEhR1
+!s100 ?CVmc@UK_U5b]MaGe:Ie21
+R6
+32
+R70
+!i10b 1
+R71
+Z88 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/dnf12/Desktop/dWatchProject/MUXNto1_Kbits.vhd|
+Z89 !s107 C:/Users/dnf12/Desktop/dWatchProject/MUXNto1_Kbits.vhd|
+!i113 1
+R11
+R12
+Asel
+R45
+R46
+R47
+R2
+R3
+DEx4 work 13 muxnto1_kbits 0 22 jm^Ia9SImlBg5h<NEKEhR1
+!i122 370
+l15
+L14 9
+V`eHSKVmI6m@5DT2cEQOkn3
+!s100 :e5d4eX9_oKCz7RYm`I0]2
+R6
+32
+R70
+!i10b 1
+R71
+R88
+R89
+!i113 1
+R11
+R12
+Enbits_mode
+Z90 w1637570938
+R45
+R46
+R47
+R2
+R3
+!i122 384
+R0
+Z91 8C:/Users/dnf12/Desktop/dWatchProject/Nbits_Mode.vhd
+Z92 FC:/Users/dnf12/Desktop/dWatchProject/Nbits_Mode.vhd
+l0
+L6 1
+VB`D4C0HEg:>P07J]>1BTo2
+!s100 d@;2RfiMdmbT9kl?C7bFP1
+R6
+32
+R77
+!i10b 1
+R78
+Z93 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/dnf12/Desktop/dWatchProject/Nbits_Mode.vhd|
+Z94 !s107 C:/Users/dnf12/Desktop/dWatchProject/Nbits_Mode.vhd|
+!i113 1
+R11
+R12
+Asel
+R45
+R46
+R47
+R2
+R3
+DEx4 work 10 nbits_mode 0 22 B`D4C0HEg:>P07J]>1BTo2
+!i122 384
+l15
+L14 11
+V^]:H:5KVCh:4@UiNH2zk41
+!s100 EFadf=FGfbk7<[Rf<<hlS0
+R6
+32
+R77
+!i10b 1
+R78
+R93
+R94
+!i113 1
+R11
+R12
+Epulse_generator
+Z95 w1637567822
+R2
+R3
+!i122 372
+R0
+Z96 8C:/Users/dnf12/Desktop/dWatchProject/pulse_generator.vhd
+Z97 FC:/Users/dnf12/Desktop/dWatchProject/pulse_generator.vhd
+l0
+L5 1
+VnDPDS9_64?IDO`XQ5SeAU0
+!s100 ;QgLJ7QlbL@XFbOkB7TSa2
+R6
+32
+Z98 !s110 1637570492
+!i10b 1
+Z99 !s108 1637570492.000000
+Z100 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/dnf12/Desktop/dWatchProject/pulse_generator.vhd|
+Z101 !s107 C:/Users/dnf12/Desktop/dWatchProject/pulse_generator.vhd|
+!i113 1
+R11
+R12
+Acntpulse
+R2
+R3
+DEx4 work 15 pulse_generator 0 22 nDPDS9_64?IDO`XQ5SeAU0
+!i122 372
+l12
+L11 15
+V?8f:D[WW=LOnW1SQ^l=Iz0
+!s100 a]bJbSAkh6ZM^ON>BX?n92
+R6
+32
+R98
+!i10b 1
+R99
+R100
+R101
+!i113 1
+R11
+R12
+Eregister_nbit
+Z102 w1637320315
+R2
+R3
+!i122 373
+R0
+Z103 8C:/Users/dnf12/Desktop/dWatchProject/register_Nbit.vhd
+Z104 FC:/Users/dnf12/Desktop/dWatchProject/register_Nbit.vhd
+l0
+L4 1
+V=<Zh@UA@EEPM8eI8iS@4f1
+!s100 R^>S_ANoK1enCVB3CIDOZ3
+R6
+32
+R98
+!i10b 1
+R99
+Z105 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/dnf12/Desktop/dWatchProject/register_Nbit.vhd|
+Z106 !s107 C:/Users/dnf12/Desktop/dWatchProject/register_Nbit.vhd|
+!i113 1
+R11
+R12
+Areg
+R2
+R3
+DEx4 work 13 register_nbit 0 22 =<Zh@UA@EEPM8eI8iS@4f1
+!i122 373
+l13
+L12 9
+V:JQ;MJgJj^@6G9zGkX]WK2
+!s100 TeN`ig:MnBa:m:YkJmLak2
+R6
+32
+R98
+!i10b 1
+R99
+R105
+R106
+!i113 1
+R11
+R12
+Esegment_7
+Z107 w1637477999
+R2
+R3
+!i122 374
+R0
+Z108 8C:/Users/dnf12/Desktop/dWatchProject/segment_7.vhd
+Z109 FC:/Users/dnf12/Desktop/dWatchProject/segment_7.vhd
+l0
+L4 1
+VT4l1Nb?N96na=Zn8MjdF@2
+!s100 MzX13HmS>SAN8g@zz4b`Q3
+R6
+32
+R98
+!i10b 1
+R99
+Z110 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/dnf12/Desktop/dWatchProject/segment_7.vhd|
+Z111 !s107 C:/Users/dnf12/Desktop/dWatchProject/segment_7.vhd|
+!i113 1
+R11
+R12
+Aseg
+R2
+R3
+DEx4 work 9 segment_7 0 22 T4l1Nb?N96na=Zn8MjdF@2
+!i122 374
+l12
+L11 19
+VM:9Dk>RfiYdM7gWoadBC;1
+!s100 XA0C[CGoe?FS^2;lZldk20
+R6
+32
+R98
+!i10b 1
+R99
+R110
+R111
+!i113 1
+R11
+R12
+Eset_time
+Z112 w1637484137
+R45
+R46
+R47
+R2
+R3
+!i122 375
+R0
+Z113 8C:/Users/dnf12/Desktop/dWatchProject/Set_Time.vhd
+Z114 FC:/Users/dnf12/Desktop/dWatchProject/Set_Time.vhd
+l0
+L6 1
+VPCcYIO66Y5D`h0e@Jn=7e0
+!s100 eOCI=R5IA[4daL=9Ij>Im3
+R6
+32
+R98
+!i10b 1
+R99
+Z115 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/dnf12/Desktop/dWatchProject/Set_Time.vhd|
+Z116 !s107 C:/Users/dnf12/Desktop/dWatchProject/Set_Time.vhd|
+!i113 1
+R11
+R12
+Aset
+R45
+R46
+R47
+R2
+R3
+DEx4 work 8 set_time 0 22 PCcYIO66Y5D`h0e@Jn=7e0
+!i122 375
+l50
+L18 89
+V34=JdH9HAbd`SAlcnK^QA0
+!s100 S9?HHWKn;F6dCS>2Q7j?f3
+R6
+32
+R98
+!i10b 1
+R99
+R115
+R116
+!i113 1
+R11
+R12
+Estop_watch
+Z117 w1637561173
+R45
+R46
+R47
+R2
+R3
+!i122 376
+R0
+Z118 8C:/Users/dnf12/Desktop/dWatchProject/stop_Watch.vhd
+Z119 FC:/Users/dnf12/Desktop/dWatchProject/stop_Watch.vhd
+l0
+L6 1
+VJ]o0B:G3T9Pdz?nX`[5H?3
+!s100 PSHPPW4OdPn7fADZ0Y32@0
+R6
+32
+Z120 !s110 1637570493
+!i10b 1
+R99
+Z121 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/dnf12/Desktop/dWatchProject/stop_Watch.vhd|
+Z122 !s107 C:/Users/dnf12/Desktop/dWatchProject/stop_Watch.vhd|
+!i113 1
+R11
+R12
+Astw
+R45
+R46
+R47
+R2
+R3
+DEx4 work 10 stop_watch 0 22 J]o0B:G3T9Pdz?nX`[5H?3
+!i122 376
+l36
+L16 68
+VA19UM?NA4HhGX61lkD@_90
+!s100 md]]k5f6^IV21h`m16KTZ2
+R6
+32
+R120
+!i10b 1
+R99
+R121
+R122
+!i113 1
+R11
+R12
+Etbb
+Z123 w1637324368
+R2
+R3
+!i122 377
+R0
+Z124 8C:/Users/dnf12/Desktop/dWatchProject/tbb.vhd
+Z125 FC:/Users/dnf12/Desktop/dWatchProject/tbb.vhd
+l0
+L4 1
+VWOXT^[L2Z;N3FVE3[J45d3
+!s100 :_9@[TR:o;L`5CofRlW^23
+R6
+32
+R120
+!i10b 1
+Z126 !s108 1637570493.000000
+Z127 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/dnf12/Desktop/dWatchProject/tbb.vhd|
+Z128 !s107 C:/Users/dnf12/Desktop/dWatchProject/tbb.vhd|
+!i113 1
+R11
+R12
+Atb
+R2
+R3
+DEx4 work 3 tbb 0 22 WOXT^[L2Z;N3FVE3[J45d3
+!i122 377
+l19
+L7 30
+VzI;A^@;16I>WL:INZF;VP0
+!s100 k:<;BNO@maz?cVQO?GbBD2
+R6
+32
+R120
+!i10b 1
+R126
+R127
+R128
+!i113 1
+R11
+R12
+Ewatch
+Z129 w1637557836
+R45
+R46
+R47
+R2
+R3
+!i122 378
+R0
+Z130 8C:/Users/dnf12/Desktop/dWatchProject/Watch.vhd
+Z131 FC:/Users/dnf12/Desktop/dWatchProject/Watch.vhd
+l0
+L6 1
+VjzFfZ5SP=V=9QM2=L]4Zl0
+!s100 ZPNR8^<RWbJTP11LO?ZGQ1
+R6
+32
+R120
+!i10b 1
+R126
+Z132 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/dnf12/Desktop/dWatchProject/Watch.vhd|
+Z133 !s107 C:/Users/dnf12/Desktop/dWatchProject/Watch.vhd|
+!i113 1
+R11
+R12
+Awtc
+R45
+R46
+R47
+R2
+R3
+DEx4 work 5 watch 0 22 jzFfZ5SP=V=9QM2=L]4Zl0
+!i122 378
+l29
+L16 81
+VZ=]dFLjg<Eia[9dd3Wa`[0
+!s100 zhV43SG9z[jdh@NJo@bGR3
+R6
+32
+R120
+!i10b 1
+R126
+R132
+R133
+!i113 1
+R11
+R12
+Ewatch_tb
+Z134 w1637332724
+R45
+R46
+R47
+R2
+R3
+!i122 379
+R0
+Z135 8C:/Users/dnf12/Desktop/dWatchProject/Watch_tb.vhd
+Z136 FC:/Users/dnf12/Desktop/dWatchProject/Watch_tb.vhd
+l0
+L6 1
+V][DhQVb`Q;V0I@3]OGgbS1
+!s100 CkzVl1mZ:dEX8=55afS4K1
+R6
+32
+R120
+!i10b 1
+R126
+Z137 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/dnf12/Desktop/dWatchProject/Watch_tb.vhd|
+Z138 !s107 C:/Users/dnf12/Desktop/dWatchProject/Watch_tb.vhd|
+!i113 1
+R11
+R12
+Atb
+R45
+R46
+R47
+R2
+R3
+DEx4 work 8 watch_tb 0 22 ][DhQVb`Q;V0I@3]OGgbS1
+!i122 379
+l24
+L9 40
+V5VhcIVG4A:X0QTzGnV:zJ3
+!s100 B1Smc[SJ4:iNQ7_0WlV7V3
+R6
+32
+R120
+!i10b 1
+R126
+R137
+R138
+!i113 1
+R11
+R12

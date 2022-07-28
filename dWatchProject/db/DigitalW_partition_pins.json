@@ -1,0 +1,197 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "visible_Out5[0]",
+					"strict" : false
+				},
+				{
+					"name" : "visible_Out5[1]",
+					"strict" : false
+				},
+				{
+					"name" : "visible_Out5[2]",
+					"strict" : false
+				},
+				{
+					"name" : "visible_Out5[3]",
+					"strict" : false
+				},
+				{
+					"name" : "visible_Out5[4]",
+					"strict" : false
+				},
+				{
+					"name" : "visible_Out5[5]",
+					"strict" : false
+				},
+				{
+					"name" : "visible_Out5[6]",
+					"strict" : false
+				},
+				{
+					"name" : "visible_Out4[0]",
+					"strict" : false
+				},
+				{
+					"name" : "visible_Out4[1]",
+					"strict" : false
+				},
+				{
+					"name" : "visible_Out4[2]",
+					"strict" : false
+				},
+				{
+					"name" : "visible_Out4[3]",
+					"strict" : false
+				},
+				{
+					"name" : "visible_Out4[4]",
+					"strict" : false
+				},
+				{
+					"name" : "visible_Out4[5]",
+					"strict" : false
+				},
+				{
+					"name" : "visible_Out4[6]",
+					"strict" : false
+				},
+				{
+					"name" : "visible_Out3[0]",
+					"strict" : false
+				},
+				{
+					"name" : "visible_Out3[1]",
+					"strict" : false
+				},
+				{
+					"name" : "visible_Out3[2]",
+					"strict" : false
+				},
+				{
+					"name" : "visible_Out3[3]",
+					"strict" : false
+				},
+				{
+					"name" : "visible_Out3[4]",
+					"strict" : false
+				},
+				{
+					"name" : "visible_Out3[5]",
+					"strict" : false
+				},
+				{
+					"name" : "visible_Out3[6]",
+					"strict" : false
+				},
+				{
+					"name" : "visible_Out2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "visible_Out2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "visible_Out2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "visible_Out2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "visible_Out2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "visible_Out2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "visible_Out2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "visible_Out1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "visible_Out1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "visible_Out1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "visible_Out1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "visible_Out1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "visible_Out1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "visible_Out1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "visible_Out0[0]",
+					"strict" : false
+				},
+				{
+					"name" : "visible_Out0[1]",
+					"strict" : false
+				},
+				{
+					"name" : "visible_Out0[2]",
+					"strict" : false
+				},
+				{
+					"name" : "visible_Out0[3]",
+					"strict" : false
+				},
+				{
+					"name" : "visible_Out0[4]",
+					"strict" : false
+				},
+				{
+					"name" : "visible_Out0[5]",
+					"strict" : false
+				},
+				{
+					"name" : "visible_Out0[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Mclk",
+					"strict" : false
+				},
+				{
+					"name" : "Key3",
+					"strict" : false
+				},
+				{
+					"name" : "Key1",
+					"strict" : false
+				},
+				{
+					"name" : "Key4",
+					"strict" : false
+				},
+				{
+					"name" : "Key2",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

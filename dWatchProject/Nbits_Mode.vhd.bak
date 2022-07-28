@@ -1,0 +1,24 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.NUMERIC_std.all;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+entity Nbit_Mode is
+generic( N : integer );
+port(
+	clk : in std_logic;			--	Input - DeKey1 
+	M : out std_logic_vector (N-1 downto 0)	--Mode (00 01 10 11)
+	);
+end Nbit_Mode;
+
+architecture sel of Nbit_Mode is
+begin
+process(clk)
+variable m_var : std_logic_vector (N-1 downto 0) := (others => '0');
+begin
+	if(rising_edge(clk))	then
+		m_var := m_var + 1 ;
+	end if;
+	M<=m_var;
+end process;
+end sel;	

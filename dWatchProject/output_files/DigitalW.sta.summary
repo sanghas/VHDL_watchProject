@@ -1,0 +1,437 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'Mclk'
+Slack : -128.768
+TNS   : -765.623
+
+Type  : Slow 1200mV 85C Model Setup 'Clk_gen:pulse|pulse_generator:PUL1|out_clk'
+Slack : -4.337
+TNS   : -77.799
+
+Type  : Slow 1200mV 85C Model Setup 'Clk_gen:pulse|pulse_generator:PUL3|out_clk'
+Slack : -3.916
+TNS   : -257.528
+
+Type  : Slow 1200mV 85C Model Setup 'DeBounce:DeB|Out4'
+Slack : -3.843
+TNS   : -101.693
+
+Type  : Slow 1200mV 85C Model Setup 'Nbits_Mode:Md|m_var[0]'
+Slack : -3.616
+TNS   : -138.594
+
+Type  : Slow 1200mV 85C Model Setup 'Set_Time:ALM_Set|Key_Seq_Gen:KSG|b_clk'
+Slack : -3.602
+TNS   : -53.833
+
+Type  : Slow 1200mV 85C Model Setup 'Set_Time:WCH_Set|Key_Seq_Gen:KSG|b_clk'
+Slack : -3.370
+TNS   : -50.676
+
+Type  : Slow 1200mV 85C Model Setup 'Clk_gen:pulse|pulse_generator:PUL2|out_clk'
+Slack : -2.317
+TNS   : -45.044
+
+Type  : Slow 1200mV 85C Model Setup 'DeBounce:DeB|Out2'
+Slack : -2.182
+TNS   : -4.098
+
+Type  : Slow 1200mV 85C Model Setup 'DeBounce:DeB|Out1'
+Slack : -0.751
+TNS   : -1.182
+
+Type  : Slow 1200mV 85C Model Hold 'Nbits_Mode:Md|m_var[0]'
+Slack : -1.669
+TNS   : -2.784
+
+Type  : Slow 1200mV 85C Model Hold 'Set_Time:WCH_Set|Key_Seq_Gen:KSG|b_clk'
+Slack : 0.229
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'Mclk'
+Slack : 0.341
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'Clk_gen:pulse|pulse_generator:PUL2|out_clk'
+Slack : 0.356
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'Clk_gen:pulse|pulse_generator:PUL1|out_clk'
+Slack : 0.357
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'DeBounce:DeB|Out4'
+Slack : 0.381
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'DeBounce:DeB|Out2'
+Slack : 0.385
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'Clk_gen:pulse|pulse_generator:PUL3|out_clk'
+Slack : 0.438
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'DeBounce:DeB|Out1'
+Slack : 0.488
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'Set_Time:ALM_Set|Key_Seq_Gen:KSG|b_clk'
+Slack : 0.584
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'Clk_gen:pulse|pulse_generator:PUL2|out_clk'
+Slack : -2.856
+TNS   : -65.844
+
+Type  : Slow 1200mV 85C Model Recovery 'Set_Time:ALM_Set|Key_Seq_Gen:KSG|b_clk'
+Slack : -1.496
+TNS   : -23.910
+
+Type  : Slow 1200mV 85C Model Recovery 'Set_Time:WCH_Set|Key_Seq_Gen:KSG|b_clk'
+Slack : -1.299
+TNS   : -20.782
+
+Type  : Slow 1200mV 85C Model Removal 'Clk_gen:pulse|pulse_generator:PUL2|out_clk'
+Slack : 0.469
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'Set_Time:WCH_Set|Key_Seq_Gen:KSG|b_clk'
+Slack : 0.640
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'Set_Time:ALM_Set|Key_Seq_Gen:KSG|b_clk'
+Slack : 0.871
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Mclk'
+Slack : -3.000
+TNS   : -41.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Nbits_Mode:Md|m_var[0]'
+Slack : -1.378
+TNS   : -15.473
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Clk_gen:pulse|pulse_generator:PUL3|out_clk'
+Slack : -1.000
+TNS   : -66.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Clk_gen:pulse|pulse_generator:PUL2|out_clk'
+Slack : -1.000
+TNS   : -28.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Clk_gen:pulse|pulse_generator:PUL1|out_clk'
+Slack : -1.000
+TNS   : -24.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Set_Time:ALM_Set|Key_Seq_Gen:KSG|b_clk'
+Slack : -1.000
+TNS   : -16.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Set_Time:WCH_Set|Key_Seq_Gen:KSG|b_clk'
+Slack : -1.000
+TNS   : -16.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'DeBounce:DeB|Out2'
+Slack : -1.000
+TNS   : -3.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'DeBounce:DeB|Out1'
+Slack : -1.000
+TNS   : -2.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'DeBounce:DeB|Out4'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Slow 1200mV 0C Model Setup 'Mclk'
+Slack : -114.920
+TNS   : -678.895
+
+Type  : Slow 1200mV 0C Model Setup 'Clk_gen:pulse|pulse_generator:PUL1|out_clk'
+Slack : -3.745
+TNS   : -67.325
+
+Type  : Slow 1200mV 0C Model Setup 'Clk_gen:pulse|pulse_generator:PUL3|out_clk'
+Slack : -3.483
+TNS   : -227.821
+
+Type  : Slow 1200mV 0C Model Setup 'DeBounce:DeB|Out4'
+Slack : -3.456
+TNS   : -91.057
+
+Type  : Slow 1200mV 0C Model Setup 'Set_Time:ALM_Set|Key_Seq_Gen:KSG|b_clk'
+Slack : -3.277
+TNS   : -47.919
+
+Type  : Slow 1200mV 0C Model Setup 'Nbits_Mode:Md|m_var[0]'
+Slack : -3.252
+TNS   : -121.586
+
+Type  : Slow 1200mV 0C Model Setup 'Set_Time:WCH_Set|Key_Seq_Gen:KSG|b_clk'
+Slack : -3.002
+TNS   : -44.330
+
+Type  : Slow 1200mV 0C Model Setup 'Clk_gen:pulse|pulse_generator:PUL2|out_clk'
+Slack : -2.026
+TNS   : -38.745
+
+Type  : Slow 1200mV 0C Model Setup 'DeBounce:DeB|Out2'
+Slack : -1.912
+TNS   : -3.427
+
+Type  : Slow 1200mV 0C Model Setup 'DeBounce:DeB|Out1'
+Slack : -0.568
+TNS   : -0.915
+
+Type  : Slow 1200mV 0C Model Hold 'Nbits_Mode:Md|m_var[0]'
+Slack : -1.510
+TNS   : -2.479
+
+Type  : Slow 1200mV 0C Model Hold 'Set_Time:WCH_Set|Key_Seq_Gen:KSG|b_clk'
+Slack : 0.205
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'Mclk'
+Slack : 0.296
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'Clk_gen:pulse|pulse_generator:PUL2|out_clk'
+Slack : 0.311
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'Clk_gen:pulse|pulse_generator:PUL1|out_clk'
+Slack : 0.312
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'DeBounce:DeB|Out4'
+Slack : 0.333
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'DeBounce:DeB|Out2'
+Slack : 0.341
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'Clk_gen:pulse|pulse_generator:PUL3|out_clk'
+Slack : 0.405
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'DeBounce:DeB|Out1'
+Slack : 0.428
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'Set_Time:ALM_Set|Key_Seq_Gen:KSG|b_clk'
+Slack : 0.564
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'Clk_gen:pulse|pulse_generator:PUL2|out_clk'
+Slack : -2.459
+TNS   : -56.416
+
+Type  : Slow 1200mV 0C Model Recovery 'Set_Time:ALM_Set|Key_Seq_Gen:KSG|b_clk'
+Slack : -1.253
+TNS   : -20.048
+
+Type  : Slow 1200mV 0C Model Recovery 'Set_Time:WCH_Set|Key_Seq_Gen:KSG|b_clk'
+Slack : -1.048
+TNS   : -16.765
+
+Type  : Slow 1200mV 0C Model Removal 'Clk_gen:pulse|pulse_generator:PUL2|out_clk'
+Slack : 0.453
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'Set_Time:WCH_Set|Key_Seq_Gen:KSG|b_clk'
+Slack : 0.544
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'Set_Time:ALM_Set|Key_Seq_Gen:KSG|b_clk'
+Slack : 0.793
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Mclk'
+Slack : -3.000
+TNS   : -41.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Nbits_Mode:Md|m_var[0]'
+Slack : -1.239
+TNS   : -13.882
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Clk_gen:pulse|pulse_generator:PUL3|out_clk'
+Slack : -1.000
+TNS   : -66.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Clk_gen:pulse|pulse_generator:PUL2|out_clk'
+Slack : -1.000
+TNS   : -28.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Clk_gen:pulse|pulse_generator:PUL1|out_clk'
+Slack : -1.000
+TNS   : -24.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Set_Time:ALM_Set|Key_Seq_Gen:KSG|b_clk'
+Slack : -1.000
+TNS   : -16.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Set_Time:WCH_Set|Key_Seq_Gen:KSG|b_clk'
+Slack : -1.000
+TNS   : -16.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'DeBounce:DeB|Out2'
+Slack : -1.000
+TNS   : -3.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'DeBounce:DeB|Out1'
+Slack : -1.000
+TNS   : -2.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'DeBounce:DeB|Out4'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Fast 1200mV 0C Model Setup 'Mclk'
+Slack : -73.509
+TNS   : -423.520
+
+Type  : Fast 1200mV 0C Model Setup 'Clk_gen:pulse|pulse_generator:PUL1|out_clk'
+Slack : -2.385
+TNS   : -42.162
+
+Type  : Fast 1200mV 0C Model Setup 'DeBounce:DeB|Out4'
+Slack : -2.148
+TNS   : -53.966
+
+Type  : Fast 1200mV 0C Model Setup 'Nbits_Mode:Md|m_var[0]'
+Slack : -2.024
+TNS   : -66.853
+
+Type  : Fast 1200mV 0C Model Setup 'Set_Time:ALM_Set|Key_Seq_Gen:KSG|b_clk'
+Slack : -1.880
+TNS   : -28.304
+
+Type  : Fast 1200mV 0C Model Setup 'Clk_gen:pulse|pulse_generator:PUL3|out_clk'
+Slack : -1.784
+TNS   : -116.144
+
+Type  : Fast 1200mV 0C Model Setup 'Set_Time:WCH_Set|Key_Seq_Gen:KSG|b_clk'
+Slack : -1.745
+TNS   : -25.023
+
+Type  : Fast 1200mV 0C Model Setup 'DeBounce:DeB|Out2'
+Slack : -1.071
+TNS   : -1.596
+
+Type  : Fast 1200mV 0C Model Setup 'Clk_gen:pulse|pulse_generator:PUL2|out_clk'
+Slack : -0.829
+TNS   : -14.251
+
+Type  : Fast 1200mV 0C Model Setup 'DeBounce:DeB|Out1'
+Slack : -0.015
+TNS   : -0.015
+
+Type  : Fast 1200mV 0C Model Hold 'Nbits_Mode:Md|m_var[0]'
+Slack : -0.943
+TNS   : -1.432
+
+Type  : Fast 1200mV 0C Model Hold 'Set_Time:WCH_Set|Key_Seq_Gen:KSG|b_clk'
+Slack : 0.165
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'Mclk'
+Slack : 0.178
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'Clk_gen:pulse|pulse_generator:PUL2|out_clk'
+Slack : 0.186
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'Clk_gen:pulse|pulse_generator:PUL1|out_clk'
+Slack : 0.187
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'DeBounce:DeB|Out4'
+Slack : 0.199
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'Clk_gen:pulse|pulse_generator:PUL3|out_clk'
+Slack : 0.201
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'DeBounce:DeB|Out2'
+Slack : 0.208
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'DeBounce:DeB|Out1'
+Slack : 0.222
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'Set_Time:ALM_Set|Key_Seq_Gen:KSG|b_clk'
+Slack : 0.282
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'Clk_gen:pulse|pulse_generator:PUL2|out_clk'
+Slack : -1.333
+TNS   : -30.440
+
+Type  : Fast 1200mV 0C Model Recovery 'Set_Time:ALM_Set|Key_Seq_Gen:KSG|b_clk'
+Slack : -0.515
+TNS   : -8.240
+
+Type  : Fast 1200mV 0C Model Recovery 'Set_Time:WCH_Set|Key_Seq_Gen:KSG|b_clk'
+Slack : -0.386
+TNS   : -6.168
+
+Type  : Fast 1200mV 0C Model Removal 'Clk_gen:pulse|pulse_generator:PUL2|out_clk'
+Slack : 0.184
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'Set_Time:WCH_Set|Key_Seq_Gen:KSG|b_clk'
+Slack : 0.435
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'Set_Time:ALM_Set|Key_Seq_Gen:KSG|b_clk'
+Slack : 0.508
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Mclk'
+Slack : -3.000
+TNS   : -43.575
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Clk_gen:pulse|pulse_generator:PUL3|out_clk'
+Slack : -1.000
+TNS   : -66.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Clk_gen:pulse|pulse_generator:PUL2|out_clk'
+Slack : -1.000
+TNS   : -28.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Clk_gen:pulse|pulse_generator:PUL1|out_clk'
+Slack : -1.000
+TNS   : -24.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Set_Time:ALM_Set|Key_Seq_Gen:KSG|b_clk'
+Slack : -1.000
+TNS   : -16.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Set_Time:WCH_Set|Key_Seq_Gen:KSG|b_clk'
+Slack : -1.000
+TNS   : -16.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Nbits_Mode:Md|m_var[0]'
+Slack : -1.000
+TNS   : -7.900
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'DeBounce:DeB|Out2'
+Slack : -1.000
+TNS   : -3.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'DeBounce:DeB|Out1'
+Slack : -1.000
+TNS   : -2.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'DeBounce:DeB|Out4'
+Slack : -1.000
+TNS   : -1.000
+
+------------------------------------------------------------

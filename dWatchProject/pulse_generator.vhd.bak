@@ -1,0 +1,22 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity pulse_generator is
+	generic ( inHz, outHz : integer );
+	port( in_clk : std_logic;
+			out_clk : std_logic);
+end pulse_generator;
+
+architecture cntpulse of pulse_generator is
+variable cnt : integer := 0;
+begin
+process(in_clk)
+variable pul : std_logic := '0';
+	if(rising_edge(in_clk)) then
+		cnt := cnt+1;
+		if(cnt mod (inHz/2*outHz) = 0)	then
+			pul := not pul;
+		end if;
+	end if;
+end process;
+end cntpulse;

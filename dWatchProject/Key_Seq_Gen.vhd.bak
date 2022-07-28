@@ -1,0 +1,43 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity Key_Seq_Gen is
+port(
+	clk 	: in std_logic;	-- T=50ms
+	KeyIn : in std_logic;	--	DeKey3
+	KeyPulse	: out std_logic	--Inc_Pulse
+	);
+end Key_Seq_Gen;
+
+architecture set of Key_Seq_Gen is
+begin
+process(clk)
+	variable time_cnt : integer := 0;
+	variable b_clk : std_logic := '0';
+begin
+
+	if ( rising_edge(clk) )	then
+		if(KeyIn='1') then
+			if( time_cnt=0 )then
+				b_clk:='1';
+				time_cnt := time_cnt+1;
+			elsif(b_clk = '1') then
+				b_clk := '0';
+				time_cnt := time_cnt+1;
+			elsif(b_clk = '0' and time_cnt >= 10)	then
+				b_clk := '1';
+			else
+				time_cnt := time_cnt + 1;
+			end if;
+		else
+			b_clk := '0';
+			time_cnt := 0;
+		end if;
+	end if;
+	KeyPulse<=b_clk;
+end process;
+
+
+end set;		
+	
+	

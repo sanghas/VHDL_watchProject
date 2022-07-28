@@ -1,0 +1,70 @@
+# Compile of Clk_gen.vhd was successful.
+# Compile of Clk_gen_tb.vhd was successful.
+# Compile of Comparator.vhd was successful.
+# Compile of DeBounce.vhd was successful.
+# Compile of Decoder_Block.vhd was successful.
+# Compile of decoder2to4.vhd was successful.
+# Compile of DigitalW.vhd failed with 3 errors.
+# Compile of dWatch_components.vhd was successful.
+# Compile of dwatch_tb.vhd was successful.
+# Compile of Key_Seq_Gen.vhd was successful.
+# Compile of MUX2to1_Nbits.vhd was successful.
+# Compile of MUX4to1_24bit.vhd was successful.
+# Compile of MUXNto1_Kbits.vhd was successful.
+# Compile of Nbits_Mode.vhd was successful.
+# Compile of pulse_generator.vhd was successful.
+# Compile of register_Nbit.vhd was successful.
+# Compile of segment_7.vhd was successful.
+# Compile of Set_Time.vhd was successful.
+# Compile of stop_Watch.vhd failed with 9 errors.
+# Compile of tbb.vhd was successful.
+# Compile of Watch.vhd was successful.
+# Compile of Watch_tb.vhd was successful.
+# 22 compiles, 2 failed with 12 errors.
+# Compile of stop_Watch.vhd failed with 5 errors.
+# Compile of stop_Watch.vhd failed with 2 errors.
+# Compile of stop_Watch.vhd was successful.
+# Compile of DigitalW.vhd was successful.
+vsim -gui work.dwatch_tb
+# vsim -gui work.dwatch_tb 
+# Start time: 12:48:47 on Nov 22,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.dwatch_tb(tb)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.dwatch_components
+# Loading work.digitalw(rtl)
+# Loading work.clk_gen(generator)
+# Loading work.pulse_generator(cntpulse)
+# Loading work.debounce(dff)
+# Loading work.nbits_mode(sel)
+# Loading work.decoder2to4(decode)
+# Loading work.comparator(comparison)
+# Loading work.watch(wtc)
+# Loading work.mux2to1_nbits(sel)
+# Loading work.set_time(set)
+# Loading work.key_seq_gen(set)
+# Loading work.stop_watch(stw)
+# Loading work.mux_4to1_24bit(selec)
+# Loading work.decoder_block(decoder)
+# Loading work.segment_7(seg)
+# Trace back: Error QStructure::sort: invalid command name ""
+#   <6:C:/mtitcl/vsim/qstructure.tc_:2478: ::QStructure::sort .main_pane.structure 0 descending
+#   <5:eval:1: ::QStructure::structsort .main_pane.structure 0 descending
+#   <4:eval:1: ::namespace inscope ::QStructure {structsort .main_pane.structure} 0 descending
+#   >3:proc:26: ::.main_pane.structure.interior.cs.body.struct sort 0 descending
+#   >2:proc:10: ::.main_pane.structure.interior.cs.body.struct _initializeSortColumn
+#   <1:eval:1: ::namespace inscope ::vsimwidgets::Hierarchy {::.main_pane.structure.interior.cs.body.struct _initializeSortColumn}
+add wave *
+delse wave *
+# invalid command name "delse"
+delete wave *
+add wave *
+run 2 min
+quit -sim
+# End time: 17:19:45 on Nov 22,2021, Elapsed time: 4:30:58
+# Errors: 0, Warnings: 6
+cd C:/intelFPGA_lite/20.1/test

@@ -1,0 +1,1160 @@
+Analysis & Synthesis report for DigitalW
+Tue Nov 23 21:13:56 2021
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: Clk_gen:pulse
+ 13. Parameter Settings for User Entity Instance: Clk_gen:pulse|pulse_generator:PUL1
+ 14. Parameter Settings for User Entity Instance: Clk_gen:pulse|pulse_generator:PUL2
+ 15. Parameter Settings for User Entity Instance: Clk_gen:pulse|pulse_generator:PUL3
+ 16. Parameter Settings for User Entity Instance: Nbits_Mode:Md
+ 17. Parameter Settings for User Entity Instance: Comparator:comp
+ 18. Parameter Settings for User Entity Instance: watch:WCH|MUX2to1_Nbits:MUX
+ 19. Parameter Settings for User Entity Instance: watch:WCH|MUX2to1_Nbits:OUTHM
+ 20. Parameter Settings for User Entity Instance: Set_Time:WCH_Set|MUX2to1_Nbits:Toggle
+ 21. Parameter Settings for User Entity Instance: Set_Time:WCH_Set|Nbits_Mode:selHM
+ 22. Parameter Settings for User Entity Instance: Set_Time:ALM_Set|MUX2to1_Nbits:Toggle
+ 23. Parameter Settings for User Entity Instance: Set_Time:ALM_Set|Nbits_Mode:selHM
+ 24. Parameter Settings for User Entity Instance: stop_Watch:SWCH|Nbits_Mode:sel_OnOff
+ 25. Parameter Settings for User Entity Instance: stop_Watch:SWCH|MUX2to1_Nbits:MUX
+ 26. Parameter Settings for User Entity Instance: MUX_4to1_24bit:MUX|MUX2to1_Nbits:MUX1
+ 27. Parameter Settings for User Entity Instance: MUX_4to1_24bit:MUX|MUX2to1_Nbits:MUX2
+ 28. Parameter Settings for User Entity Instance: MUX_4to1_24bit:MUX|MUX2to1_Nbits:MUX3
+ 29. Parameter Settings for User Entity Instance: MUX2to1_Nbits:Blink5
+ 30. Parameter Settings for User Entity Instance: MUX2to1_Nbits:Blink4
+ 31. Parameter Settings for User Entity Instance: MUX2to1_Nbits:Blink3
+ 32. Parameter Settings for User Entity Instance: MUX2to1_Nbits:Blink2
+ 33. Parameter Settings for User Entity Instance: MUX2to1_Nbits:Blink1
+ 34. Parameter Settings for User Entity Instance: MUX2to1_Nbits:Blink0
+ 35. Parameter Settings for Inferred Entity Instance: Clk_gen:pulse|pulse_generator:PUL1|lpm_divide:Mod0
+ 36. Parameter Settings for Inferred Entity Instance: Clk_gen:pulse|pulse_generator:PUL2|lpm_divide:Mod0
+ 37. Parameter Settings for Inferred Entity Instance: Clk_gen:pulse|pulse_generator:PUL3|lpm_divide:Mod0
+ 38. Port Connectivity Checks: "MUX2to1_Nbits:Blink0"
+ 39. Port Connectivity Checks: "MUX2to1_Nbits:Blink1"
+ 40. Port Connectivity Checks: "MUX2to1_Nbits:Blink2"
+ 41. Port Connectivity Checks: "MUX2to1_Nbits:Blink3"
+ 42. Port Connectivity Checks: "MUX2to1_Nbits:Blink4"
+ 43. Port Connectivity Checks: "MUX2to1_Nbits:Blink5"
+ 44. Port Connectivity Checks: "MUX_4to1_24bit:MUX"
+ 45. Port Connectivity Checks: "stop_Watch:SWCH|MUX2to1_Nbits:MUX"
+ 46. Port Connectivity Checks: "watch:WCH|MUX2to1_Nbits:MUX"
+ 47. Port Connectivity Checks: "Comparator:comp"
+ 48. Post-Synthesis Netlist Statistics for Top Partition
+ 49. Elapsed Time Per Partition
+ 50. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Tue Nov 23 21:13:56 2021       ;
+; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                      ; DigitalW                                    ;
+; Top-level Entity Name              ; DigitalW                                    ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 5,631                                       ;
+;     Total combinational functions  ; 5,624                                       ;
+;     Dedicated logic registers      ; 194                                         ;
+; Total registers                    ; 194                                         ;
+; Total pins                         ; 47                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Top-level entity name                                            ; DigitalW           ; DigitalW           ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 8           ;
+;                            ;             ;
+; Average used               ; 1.01        ;
+; Maximum used               ; 8           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.1%      ;
+;     Processor 3            ;   0.1%      ;
+;     Processor 4            ;   0.1%      ;
+;     Processor 5            ;   0.1%      ;
+;     Processor 6            ;   0.1%      ;
+;     Processor 7            ;   0.1%      ;
+;     Processor 8            ;   0.1%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                   ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                               ; Library ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
+; DigitalW.vhd                     ; yes             ; User VHDL File               ; C:/Users/dnf12/Desktop/dWatchProject/DigitalW.vhd                          ;         ;
+; Comparator.vhd                   ; yes             ; User VHDL File               ; C:/Users/dnf12/Desktop/dWatchProject/Comparator.vhd                        ;         ;
+; pulse_generator.vhd              ; yes             ; User VHDL File               ; C:/Users/dnf12/Desktop/dWatchProject/pulse_generator.vhd                   ;         ;
+; DeBounce.vhd                     ; yes             ; User VHDL File               ; C:/Users/dnf12/Desktop/dWatchProject/DeBounce.vhd                          ;         ;
+; Clk_gen.vhd                      ; yes             ; User VHDL File               ; C:/Users/dnf12/Desktop/dWatchProject/Clk_gen.vhd                           ;         ;
+; decoder2to4.vhd                  ; yes             ; User VHDL File               ; C:/Users/dnf12/Desktop/dWatchProject/decoder2to4.vhd                       ;         ;
+; Decoder_Block.vhd                ; yes             ; User VHDL File               ; C:/Users/dnf12/Desktop/dWatchProject/Decoder_Block.vhd                     ;         ;
+; segment_7.vhd                    ; yes             ; User VHDL File               ; C:/Users/dnf12/Desktop/dWatchProject/segment_7.vhd                         ;         ;
+; Key_Seq_Gen.vhd                  ; yes             ; User VHDL File               ; C:/Users/dnf12/Desktop/dWatchProject/Key_Seq_Gen.vhd                       ;         ;
+; Watch.vhd                        ; yes             ; User VHDL File               ; C:/Users/dnf12/Desktop/dWatchProject/Watch.vhd                             ;         ;
+; MUX2to1_Nbits.vhd                ; yes             ; User VHDL File               ; C:/Users/dnf12/Desktop/dWatchProject/MUX2to1_Nbits.vhd                     ;         ;
+; Nbits_Mode.vhd                   ; yes             ; User VHDL File               ; C:/Users/dnf12/Desktop/dWatchProject/Nbits_Mode.vhd                        ;         ;
+; Set_Time.vhd                     ; yes             ; User VHDL File               ; C:/Users/dnf12/Desktop/dWatchProject/Set_Time.vhd                          ;         ;
+; stop_Watch.vhd                   ; yes             ; User VHDL File               ; C:/Users/dnf12/Desktop/dWatchProject/stop_Watch.vhd                        ;         ;
+; MUX4to1_24bit.vhd                ; yes             ; User VHDL File               ; C:/Users/dnf12/Desktop/dWatchProject/MUX4to1_24bit.vhd                     ;         ;
+; dWatch_components.vhd            ; yes             ; User VHDL File               ; C:/Users/dnf12/Desktop/dWatchProject/dWatch_components.vhd                 ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_divide.tdf      ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/abs_divider.inc     ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sign_div_unsign.inc ;         ;
+; aglobal201.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc      ;         ;
+; db/lpm_divide_cqo.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/dnf12/Desktop/dWatchProject/db/lpm_divide_cqo.tdf                 ;         ;
+; db/abs_divider_4dg.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/dnf12/Desktop/dWatchProject/db/abs_divider_4dg.tdf                ;         ;
+; db/alt_u_div_6af.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/dnf12/Desktop/dWatchProject/db/alt_u_div_6af.tdf                  ;         ;
+; db/add_sub_7pc.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/dnf12/Desktop/dWatchProject/db/add_sub_7pc.tdf                    ;         ;
+; db/add_sub_8pc.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/dnf12/Desktop/dWatchProject/db/add_sub_8pc.tdf                    ;         ;
+; db/lpm_abs_i0a.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/dnf12/Desktop/dWatchProject/db/lpm_abs_i0a.tdf                    ;         ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
+
+
++------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                              ;
++---------------------------------------------+--------------------------------------------+
+; Resource                                    ; Usage                                      ;
++---------------------------------------------+--------------------------------------------+
+; Estimated Total logic elements              ; 5,631                                      ;
+;                                             ;                                            ;
+; Total combinational functions               ; 5624                                       ;
+; Logic element usage by number of LUT inputs ;                                            ;
+;     -- 4 input functions                    ; 1878                                       ;
+;     -- 3 input functions                    ; 1689                                       ;
+;     -- <=2 input functions                  ; 2057                                       ;
+;                                             ;                                            ;
+; Logic elements by mode                      ;                                            ;
+;     -- normal mode                          ; 3829                                       ;
+;     -- arithmetic mode                      ; 1795                                       ;
+;                                             ;                                            ;
+; Total registers                             ; 194                                        ;
+;     -- Dedicated logic registers            ; 194                                        ;
+;     -- I/O registers                        ; 0                                          ;
+;                                             ;                                            ;
+; I/O pins                                    ; 47                                         ;
+;                                             ;                                            ;
+; Embedded Multiplier 9-bit elements          ; 0                                          ;
+;                                             ;                                            ;
+; Maximum fan-out node                        ; Clk_gen:pulse|pulse_generator:PUL1|Add0~62 ;
+; Maximum fan-out                             ; 240                                        ;
+; Total fan-out                               ; 17230                                      ;
+; Average fan-out                             ; 2.91                                       ;
++---------------------------------------------+--------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                 ;
++---------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node                  ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                       ; Entity Name     ; Library Name ;
++---------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
+; |DigitalW                                   ; 5624 (0)            ; 194 (0)                   ; 0           ; 0            ; 0       ; 0         ; 47   ; 0            ; |DigitalW                                                                                                                                 ; DigitalW        ; work         ;
+;    |Clk_gen:pulse|                          ; 5120 (0)            ; 38 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DigitalW|Clk_gen:pulse                                                                                                                   ; Clk_gen         ; work         ;
+;       |pulse_generator:PUL1|                ; 1713 (120)          ; 34 (34)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DigitalW|Clk_gen:pulse|pulse_generator:PUL1                                                                                              ; pulse_generator ; work         ;
+;          |lpm_divide:Mod0|                  ; 1593 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DigitalW|Clk_gen:pulse|pulse_generator:PUL1|lpm_divide:Mod0                                                                              ; lpm_divide      ; work         ;
+;             |lpm_divide_cqo:auto_generated| ; 1593 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DigitalW|Clk_gen:pulse|pulse_generator:PUL1|lpm_divide:Mod0|lpm_divide_cqo:auto_generated                                                ; lpm_divide_cqo  ; work         ;
+;                |abs_divider_4dg:divider|    ; 1593 (62)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DigitalW|Clk_gen:pulse|pulse_generator:PUL1|lpm_divide:Mod0|lpm_divide_cqo:auto_generated|abs_divider_4dg:divider                        ; abs_divider_4dg ; work         ;
+;                   |alt_u_div_6af:divider|   ; 1475 (1475)         ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DigitalW|Clk_gen:pulse|pulse_generator:PUL1|lpm_divide:Mod0|lpm_divide_cqo:auto_generated|abs_divider_4dg:divider|alt_u_div_6af:divider  ; alt_u_div_6af   ; work         ;
+;                   |lpm_abs_i0a:my_abs_num|  ; 56 (56)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DigitalW|Clk_gen:pulse|pulse_generator:PUL1|lpm_divide:Mod0|lpm_divide_cqo:auto_generated|abs_divider_4dg:divider|lpm_abs_i0a:my_abs_num ; lpm_abs_i0a     ; work         ;
+;       |pulse_generator:PUL2|                ; 1716 (47)           ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DigitalW|Clk_gen:pulse|pulse_generator:PUL2                                                                                              ; pulse_generator ; work         ;
+;          |lpm_divide:Mod0|                  ; 1669 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DigitalW|Clk_gen:pulse|pulse_generator:PUL2|lpm_divide:Mod0                                                                              ; lpm_divide      ; work         ;
+;             |lpm_divide_cqo:auto_generated| ; 1669 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DigitalW|Clk_gen:pulse|pulse_generator:PUL2|lpm_divide:Mod0|lpm_divide_cqo:auto_generated                                                ; lpm_divide_cqo  ; work         ;
+;                |abs_divider_4dg:divider|    ; 1669 (64)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DigitalW|Clk_gen:pulse|pulse_generator:PUL2|lpm_divide:Mod0|lpm_divide_cqo:auto_generated|abs_divider_4dg:divider                        ; abs_divider_4dg ; work         ;
+;                   |alt_u_div_6af:divider|   ; 1605 (1605)         ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DigitalW|Clk_gen:pulse|pulse_generator:PUL2|lpm_divide:Mod0|lpm_divide_cqo:auto_generated|abs_divider_4dg:divider|alt_u_div_6af:divider  ; alt_u_div_6af   ; work         ;
+;       |pulse_generator:PUL3|                ; 1691 (45)           ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DigitalW|Clk_gen:pulse|pulse_generator:PUL3                                                                                              ; pulse_generator ; work         ;
+;          |lpm_divide:Mod0|                  ; 1646 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DigitalW|Clk_gen:pulse|pulse_generator:PUL3|lpm_divide:Mod0                                                                              ; lpm_divide      ; work         ;
+;             |lpm_divide_cqo:auto_generated| ; 1646 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DigitalW|Clk_gen:pulse|pulse_generator:PUL3|lpm_divide:Mod0|lpm_divide_cqo:auto_generated                                                ; lpm_divide_cqo  ; work         ;
+;                |abs_divider_4dg:divider|    ; 1646 (64)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DigitalW|Clk_gen:pulse|pulse_generator:PUL3|lpm_divide:Mod0|lpm_divide_cqo:auto_generated|abs_divider_4dg:divider                        ; abs_divider_4dg ; work         ;
+;                   |alt_u_div_6af:divider|   ; 1582 (1582)         ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DigitalW|Clk_gen:pulse|pulse_generator:PUL3|lpm_divide:Mod0|lpm_divide_cqo:auto_generated|abs_divider_4dg:divider|alt_u_div_6af:divider  ; alt_u_div_6af   ; work         ;
+;    |DeBounce:DeB|                           ; 0 (0)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DigitalW|DeBounce:DeB                                                                                                                    ; DeBounce        ; work         ;
+;    |Decoder_Block:Decoder|                  ; 42 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DigitalW|Decoder_Block:Decoder                                                                                                           ; Decoder_Block   ; work         ;
+;       |segment_7:O0|                        ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DigitalW|Decoder_Block:Decoder|segment_7:O0                                                                                              ; segment_7       ; work         ;
+;       |segment_7:O1|                        ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DigitalW|Decoder_Block:Decoder|segment_7:O1                                                                                              ; segment_7       ; work         ;
+;       |segment_7:O2|                        ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DigitalW|Decoder_Block:Decoder|segment_7:O2                                                                                              ; segment_7       ; work         ;
+;       |segment_7:O3|                        ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DigitalW|Decoder_Block:Decoder|segment_7:O3                                                                                              ; segment_7       ; work         ;
+;       |segment_7:O4|                        ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DigitalW|Decoder_Block:Decoder|segment_7:O4                                                                                              ; segment_7       ; work         ;
+;       |segment_7:O5|                        ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DigitalW|Decoder_Block:Decoder|segment_7:O5                                                                                              ; segment_7       ; work         ;
+;    |MUX2to1_Nbits:Blink0|                   ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DigitalW|MUX2to1_Nbits:Blink0                                                                                                            ; MUX2to1_Nbits   ; work         ;
+;    |MUX2to1_Nbits:Blink1|                   ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DigitalW|MUX2to1_Nbits:Blink1                                                                                                            ; MUX2to1_Nbits   ; work         ;
+;    |MUX2to1_Nbits:Blink2|                   ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DigitalW|MUX2to1_Nbits:Blink2                                                                                                            ; MUX2to1_Nbits   ; work         ;
+;    |MUX2to1_Nbits:Blink3|                   ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DigitalW|MUX2to1_Nbits:Blink3                                                                                                            ; MUX2to1_Nbits   ; work         ;
+;    |MUX2to1_Nbits:Blink4|                   ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DigitalW|MUX2to1_Nbits:Blink4                                                                                                            ; MUX2to1_Nbits   ; work         ;
+;    |MUX2to1_Nbits:Blink5|                   ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DigitalW|MUX2to1_Nbits:Blink5                                                                                                            ; MUX2to1_Nbits   ; work         ;
+;    |MUX_4to1_24bit:MUX|                     ; 42 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DigitalW|MUX_4to1_24bit:MUX                                                                                                              ; MUX_4to1_24bit  ; work         ;
+;       |MUX2to1_Nbits:MUX3|                  ; 42 (42)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DigitalW|MUX_4to1_24bit:MUX|MUX2to1_Nbits:MUX3                                                                                           ; MUX2to1_Nbits   ; work         ;
+;    |Nbits_Mode:Md|                          ; 2 (2)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DigitalW|Nbits_Mode:Md                                                                                                                   ; Nbits_Mode      ; work         ;
+;    |Set_Time:ALM_Set|                       ; 132 (83)            ; 50 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DigitalW|Set_Time:ALM_Set                                                                                                                ; Set_Time        ; work         ;
+;       |Key_Seq_Gen:KSG|                     ; 47 (47)             ; 33 (33)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DigitalW|Set_Time:ALM_Set|Key_Seq_Gen:KSG                                                                                                ; Key_Seq_Gen     ; work         ;
+;       |MUX2to1_Nbits:Toggle|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DigitalW|Set_Time:ALM_Set|MUX2to1_Nbits:Toggle                                                                                           ; MUX2to1_Nbits   ; work         ;
+;       |Nbits_Mode:selHM|                    ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DigitalW|Set_Time:ALM_Set|Nbits_Mode:selHM                                                                                               ; Nbits_Mode      ; work         ;
+;    |Set_Time:WCH_Set|                       ; 131 (82)            ; 50 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DigitalW|Set_Time:WCH_Set                                                                                                                ; Set_Time        ; work         ;
+;       |Key_Seq_Gen:KSG|                     ; 47 (47)             ; 33 (33)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DigitalW|Set_Time:WCH_Set|Key_Seq_Gen:KSG                                                                                                ; Key_Seq_Gen     ; work         ;
+;       |MUX2to1_Nbits:Toggle|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DigitalW|Set_Time:WCH_Set|MUX2to1_Nbits:Toggle                                                                                           ; MUX2to1_Nbits   ; work         ;
+;       |Nbits_Mode:selHM|                    ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DigitalW|Set_Time:WCH_Set|Nbits_Mode:selHM                                                                                               ; Nbits_Mode      ; work         ;
+;    |decoder2to4:selEn|                      ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DigitalW|decoder2to4:selEn                                                                                                               ; decoder2to4     ; work         ;
+;    |stop_Watch:SWCH|                        ; 38 (37)             ; 25 (24)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DigitalW|stop_Watch:SWCH                                                                                                                 ; stop_Watch      ; work         ;
+;       |Nbits_Mode:sel_OnOff|                ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DigitalW|stop_Watch:SWCH|Nbits_Mode:sel_OnOff                                                                                            ; Nbits_Mode      ; work         ;
+;    |watch:WCH|                              ; 73 (53)             ; 25 (25)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DigitalW|watch:WCH                                                                                                                       ; watch           ; work         ;
+;       |MUX2to1_Nbits:OUTHM|                 ; 20 (20)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DigitalW|watch:WCH|MUX2to1_Nbits:OUTHM                                                                                                   ; MUX2to1_Nbits   ; work         ;
++---------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                         ;
++-----------------------------------------------------+------------------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal          ; Free of Timing Hazards ;
++-----------------------------------------------------+------------------------------+------------------------+
+; Set_Time:WCH_Set|SHM[12]                            ; Set_Time:WCH_Set|en_set_Time ; yes                    ;
+; Set_Time:WCH_Set|SHM[13]                            ; Set_Time:WCH_Set|en_set_Time ; yes                    ;
+; Set_Time:WCH_Set|SHM[14]                            ; Set_Time:WCH_Set|en_set_Time ; yes                    ;
+; Set_Time:WCH_Set|SHM[15]                            ; Set_Time:WCH_Set|en_set_Time ; yes                    ;
+; Set_Time:WCH_Set|SHM[8]                             ; Set_Time:WCH_Set|en_set_Time ; yes                    ;
+; Set_Time:WCH_Set|SHM[9]                             ; Set_Time:WCH_Set|en_set_Time ; yes                    ;
+; Set_Time:WCH_Set|SHM[10]                            ; Set_Time:WCH_Set|en_set_Time ; yes                    ;
+; Set_Time:WCH_Set|SHM[11]                            ; Set_Time:WCH_Set|en_set_Time ; yes                    ;
+; Set_Time:WCH_Set|SHM[4]                             ; Set_Time:WCH_Set|en_set_Time ; yes                    ;
+; Set_Time:WCH_Set|SHM[5]                             ; Set_Time:WCH_Set|en_set_Time ; yes                    ;
+; Set_Time:WCH_Set|SHM[6]                             ; Set_Time:WCH_Set|en_set_Time ; yes                    ;
+; Set_Time:WCH_Set|SHM[7]                             ; Set_Time:WCH_Set|en_set_Time ; yes                    ;
+; Set_Time:WCH_Set|SHM[0]                             ; Set_Time:WCH_Set|en_set_Time ; yes                    ;
+; Set_Time:WCH_Set|SHM[1]                             ; Set_Time:WCH_Set|en_set_Time ; yes                    ;
+; Set_Time:WCH_Set|SHM[2]                             ; Set_Time:WCH_Set|en_set_Time ; yes                    ;
+; Set_Time:WCH_Set|SHM[3]                             ; Set_Time:WCH_Set|en_set_Time ; yes                    ;
+; Set_Time:ALM_Set|SHM[12]                            ; Set_Time:ALM_Set|en_set_Time ; yes                    ;
+; Set_Time:ALM_Set|SHM[13]                            ; Set_Time:ALM_Set|en_set_Time ; yes                    ;
+; Set_Time:ALM_Set|SHM[14]                            ; Set_Time:ALM_Set|en_set_Time ; yes                    ;
+; Set_Time:ALM_Set|SHM[15]                            ; Set_Time:ALM_Set|en_set_Time ; yes                    ;
+; Set_Time:ALM_Set|SHM[8]                             ; Set_Time:ALM_Set|en_set_Time ; yes                    ;
+; Set_Time:ALM_Set|SHM[9]                             ; Set_Time:ALM_Set|en_set_Time ; yes                    ;
+; Set_Time:ALM_Set|SHM[10]                            ; Set_Time:ALM_Set|en_set_Time ; yes                    ;
+; Set_Time:ALM_Set|SHM[11]                            ; Set_Time:ALM_Set|en_set_Time ; yes                    ;
+; Set_Time:ALM_Set|SHM[4]                             ; Set_Time:ALM_Set|en_set_Time ; yes                    ;
+; Set_Time:ALM_Set|SHM[5]                             ; Set_Time:ALM_Set|en_set_Time ; yes                    ;
+; Set_Time:ALM_Set|SHM[6]                             ; Set_Time:ALM_Set|en_set_Time ; yes                    ;
+; Set_Time:ALM_Set|SHM[7]                             ; Set_Time:ALM_Set|en_set_Time ; yes                    ;
+; Set_Time:ALM_Set|SHM[0]                             ; Set_Time:ALM_Set|en_set_Time ; yes                    ;
+; Set_Time:ALM_Set|SHM[1]                             ; Set_Time:ALM_Set|en_set_Time ; yes                    ;
+; Set_Time:ALM_Set|SHM[2]                             ; Set_Time:ALM_Set|en_set_Time ; yes                    ;
+; Set_Time:ALM_Set|SHM[3]                             ; Set_Time:ALM_Set|en_set_Time ; yes                    ;
+; Number of user-specified and inferred latches = 32  ;                              ;                        ;
++-----------------------------------------------------+------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++-----------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                  ;
++--------------------------------------------+--------------------------------------------------------+
+; Register name                              ; Reason for Removal                                     ;
++--------------------------------------------+--------------------------------------------------------+
+; watch:WCH|voen                             ; Stuck at GND due to stuck port data_in                 ;
+; Set_Time:ALM_Set|\time_Set:HH10[3]         ; Merged with Set_Time:ALM_Set|HM[15]                    ;
+; Set_Time:WCH_Set|\time_Set:HH10[3]         ; Merged with Set_Time:WCH_Set|HM[15]                    ;
+; Set_Time:ALM_Set|\time_Set:HH10[2]         ; Merged with Set_Time:ALM_Set|HM[14]                    ;
+; Set_Time:WCH_Set|\time_Set:HH10[2]         ; Merged with Set_Time:WCH_Set|HM[14]                    ;
+; Set_Time:ALM_Set|\time_Set:HH10[1]         ; Merged with Set_Time:ALM_Set|HM[13]                    ;
+; Set_Time:WCH_Set|\time_Set:HH10[1]         ; Merged with Set_Time:WCH_Set|HM[13]                    ;
+; Set_Time:ALM_Set|\time_Set:HH10[0]         ; Merged with Set_Time:ALM_Set|HM[12]                    ;
+; Set_Time:WCH_Set|\time_Set:HH10[0]         ; Merged with Set_Time:WCH_Set|HM[12]                    ;
+; Set_Time:ALM_Set|\time_Set:HH1[3]          ; Merged with Set_Time:ALM_Set|HM[11]                    ;
+; Set_Time:WCH_Set|\time_Set:HH1[3]          ; Merged with Set_Time:WCH_Set|HM[11]                    ;
+; Set_Time:ALM_Set|\time_Set:HH1[2]          ; Merged with Set_Time:ALM_Set|HM[10]                    ;
+; Set_Time:WCH_Set|\time_Set:HH1[2]          ; Merged with Set_Time:WCH_Set|HM[10]                    ;
+; Set_Time:ALM_Set|\time_Set:HH1[1]          ; Merged with Set_Time:ALM_Set|HM[9]                     ;
+; Set_Time:WCH_Set|\time_Set:HH1[1]          ; Merged with Set_Time:WCH_Set|HM[9]                     ;
+; Set_Time:ALM_Set|\time_Set:HH1[0]          ; Merged with Set_Time:ALM_Set|HM[8]                     ;
+; Set_Time:WCH_Set|\time_Set:HH1[0]          ; Merged with Set_Time:WCH_Set|HM[8]                     ;
+; Set_Time:ALM_Set|\time_Set:MM10[3]         ; Merged with Set_Time:ALM_Set|HM[7]                     ;
+; Set_Time:WCH_Set|\time_Set:MM10[3]         ; Merged with Set_Time:WCH_Set|HM[7]                     ;
+; Set_Time:ALM_Set|\time_Set:MM10[2]         ; Merged with Set_Time:ALM_Set|HM[6]                     ;
+; Set_Time:WCH_Set|\time_Set:MM10[2]         ; Merged with Set_Time:WCH_Set|HM[6]                     ;
+; Set_Time:ALM_Set|\time_Set:MM10[1]         ; Merged with Set_Time:ALM_Set|HM[5]                     ;
+; Set_Time:WCH_Set|\time_Set:MM10[1]         ; Merged with Set_Time:WCH_Set|HM[5]                     ;
+; Set_Time:ALM_Set|\time_Set:MM10[0]         ; Merged with Set_Time:ALM_Set|HM[4]                     ;
+; Set_Time:WCH_Set|\time_Set:MM10[0]         ; Merged with Set_Time:WCH_Set|HM[4]                     ;
+; Set_Time:ALM_Set|\time_Set:MM1[3]          ; Merged with Set_Time:ALM_Set|HM[3]                     ;
+; Set_Time:WCH_Set|\time_Set:MM1[3]          ; Merged with Set_Time:WCH_Set|HM[3]                     ;
+; Set_Time:ALM_Set|\time_Set:MM1[2]          ; Merged with Set_Time:ALM_Set|HM[2]                     ;
+; Set_Time:WCH_Set|\time_Set:MM1[2]          ; Merged with Set_Time:WCH_Set|HM[2]                     ;
+; Set_Time:ALM_Set|\time_Set:MM1[1]          ; Merged with Set_Time:ALM_Set|HM[1]                     ;
+; Set_Time:WCH_Set|\time_Set:MM1[1]          ; Merged with Set_Time:WCH_Set|HM[1]                     ;
+; Set_Time:ALM_Set|\time_Set:MM1[0]          ; Merged with Set_Time:ALM_Set|HM[0]                     ;
+; Set_Time:WCH_Set|\time_Set:MM1[0]          ; Merged with Set_Time:WCH_Set|HM[0]                     ;
+; Clk_gen:pulse|pulse_generator:PUL2|cnt[31] ; Merged with Clk_gen:pulse|pulse_generator:PUL1|cnt[31] ;
+; Clk_gen:pulse|pulse_generator:PUL3|cnt[31] ; Merged with Clk_gen:pulse|pulse_generator:PUL1|cnt[31] ;
+; Clk_gen:pulse|pulse_generator:PUL2|cnt[30] ; Merged with Clk_gen:pulse|pulse_generator:PUL1|cnt[30] ;
+; Clk_gen:pulse|pulse_generator:PUL3|cnt[30] ; Merged with Clk_gen:pulse|pulse_generator:PUL1|cnt[30] ;
+; Clk_gen:pulse|pulse_generator:PUL2|cnt[29] ; Merged with Clk_gen:pulse|pulse_generator:PUL1|cnt[29] ;
+; Clk_gen:pulse|pulse_generator:PUL3|cnt[29] ; Merged with Clk_gen:pulse|pulse_generator:PUL1|cnt[29] ;
+; Clk_gen:pulse|pulse_generator:PUL2|cnt[28] ; Merged with Clk_gen:pulse|pulse_generator:PUL1|cnt[28] ;
+; Clk_gen:pulse|pulse_generator:PUL3|cnt[28] ; Merged with Clk_gen:pulse|pulse_generator:PUL1|cnt[28] ;
+; Clk_gen:pulse|pulse_generator:PUL2|cnt[27] ; Merged with Clk_gen:pulse|pulse_generator:PUL1|cnt[27] ;
+; Clk_gen:pulse|pulse_generator:PUL3|cnt[27] ; Merged with Clk_gen:pulse|pulse_generator:PUL1|cnt[27] ;
+; Clk_gen:pulse|pulse_generator:PUL2|cnt[26] ; Merged with Clk_gen:pulse|pulse_generator:PUL1|cnt[26] ;
+; Clk_gen:pulse|pulse_generator:PUL3|cnt[26] ; Merged with Clk_gen:pulse|pulse_generator:PUL1|cnt[26] ;
+; Clk_gen:pulse|pulse_generator:PUL2|cnt[25] ; Merged with Clk_gen:pulse|pulse_generator:PUL1|cnt[25] ;
+; Clk_gen:pulse|pulse_generator:PUL3|cnt[25] ; Merged with Clk_gen:pulse|pulse_generator:PUL1|cnt[25] ;
+; Clk_gen:pulse|pulse_generator:PUL2|cnt[24] ; Merged with Clk_gen:pulse|pulse_generator:PUL1|cnt[24] ;
+; Clk_gen:pulse|pulse_generator:PUL3|cnt[24] ; Merged with Clk_gen:pulse|pulse_generator:PUL1|cnt[24] ;
+; Clk_gen:pulse|pulse_generator:PUL2|cnt[23] ; Merged with Clk_gen:pulse|pulse_generator:PUL1|cnt[23] ;
+; Clk_gen:pulse|pulse_generator:PUL3|cnt[23] ; Merged with Clk_gen:pulse|pulse_generator:PUL1|cnt[23] ;
+; Clk_gen:pulse|pulse_generator:PUL2|cnt[22] ; Merged with Clk_gen:pulse|pulse_generator:PUL1|cnt[22] ;
+; Clk_gen:pulse|pulse_generator:PUL3|cnt[22] ; Merged with Clk_gen:pulse|pulse_generator:PUL1|cnt[22] ;
+; Clk_gen:pulse|pulse_generator:PUL2|cnt[21] ; Merged with Clk_gen:pulse|pulse_generator:PUL1|cnt[21] ;
+; Clk_gen:pulse|pulse_generator:PUL3|cnt[21] ; Merged with Clk_gen:pulse|pulse_generator:PUL1|cnt[21] ;
+; Clk_gen:pulse|pulse_generator:PUL2|cnt[20] ; Merged with Clk_gen:pulse|pulse_generator:PUL1|cnt[20] ;
+; Clk_gen:pulse|pulse_generator:PUL3|cnt[20] ; Merged with Clk_gen:pulse|pulse_generator:PUL1|cnt[20] ;
+; Clk_gen:pulse|pulse_generator:PUL2|cnt[19] ; Merged with Clk_gen:pulse|pulse_generator:PUL1|cnt[19] ;
+; Clk_gen:pulse|pulse_generator:PUL3|cnt[19] ; Merged with Clk_gen:pulse|pulse_generator:PUL1|cnt[19] ;
+; Clk_gen:pulse|pulse_generator:PUL2|cnt[18] ; Merged with Clk_gen:pulse|pulse_generator:PUL1|cnt[18] ;
+; Clk_gen:pulse|pulse_generator:PUL3|cnt[18] ; Merged with Clk_gen:pulse|pulse_generator:PUL1|cnt[18] ;
+; Clk_gen:pulse|pulse_generator:PUL2|cnt[17] ; Merged with Clk_gen:pulse|pulse_generator:PUL1|cnt[17] ;
+; Clk_gen:pulse|pulse_generator:PUL3|cnt[17] ; Merged with Clk_gen:pulse|pulse_generator:PUL1|cnt[17] ;
+; Clk_gen:pulse|pulse_generator:PUL2|cnt[16] ; Merged with Clk_gen:pulse|pulse_generator:PUL1|cnt[16] ;
+; Clk_gen:pulse|pulse_generator:PUL3|cnt[16] ; Merged with Clk_gen:pulse|pulse_generator:PUL1|cnt[16] ;
+; Clk_gen:pulse|pulse_generator:PUL2|cnt[15] ; Merged with Clk_gen:pulse|pulse_generator:PUL1|cnt[15] ;
+; Clk_gen:pulse|pulse_generator:PUL3|cnt[15] ; Merged with Clk_gen:pulse|pulse_generator:PUL1|cnt[15] ;
+; Clk_gen:pulse|pulse_generator:PUL2|cnt[14] ; Merged with Clk_gen:pulse|pulse_generator:PUL1|cnt[14] ;
+; Clk_gen:pulse|pulse_generator:PUL3|cnt[14] ; Merged with Clk_gen:pulse|pulse_generator:PUL1|cnt[14] ;
+; Clk_gen:pulse|pulse_generator:PUL2|cnt[13] ; Merged with Clk_gen:pulse|pulse_generator:PUL1|cnt[13] ;
+; Clk_gen:pulse|pulse_generator:PUL3|cnt[13] ; Merged with Clk_gen:pulse|pulse_generator:PUL1|cnt[13] ;
+; Clk_gen:pulse|pulse_generator:PUL2|cnt[12] ; Merged with Clk_gen:pulse|pulse_generator:PUL1|cnt[12] ;
+; Clk_gen:pulse|pulse_generator:PUL3|cnt[12] ; Merged with Clk_gen:pulse|pulse_generator:PUL1|cnt[12] ;
+; Clk_gen:pulse|pulse_generator:PUL2|cnt[11] ; Merged with Clk_gen:pulse|pulse_generator:PUL1|cnt[11] ;
+; Clk_gen:pulse|pulse_generator:PUL3|cnt[11] ; Merged with Clk_gen:pulse|pulse_generator:PUL1|cnt[11] ;
+; Clk_gen:pulse|pulse_generator:PUL2|cnt[10] ; Merged with Clk_gen:pulse|pulse_generator:PUL1|cnt[10] ;
+; Clk_gen:pulse|pulse_generator:PUL3|cnt[10] ; Merged with Clk_gen:pulse|pulse_generator:PUL1|cnt[10] ;
+; Clk_gen:pulse|pulse_generator:PUL2|cnt[9]  ; Merged with Clk_gen:pulse|pulse_generator:PUL1|cnt[9]  ;
+; Clk_gen:pulse|pulse_generator:PUL3|cnt[9]  ; Merged with Clk_gen:pulse|pulse_generator:PUL1|cnt[9]  ;
+; Clk_gen:pulse|pulse_generator:PUL2|cnt[8]  ; Merged with Clk_gen:pulse|pulse_generator:PUL1|cnt[8]  ;
+; Clk_gen:pulse|pulse_generator:PUL3|cnt[8]  ; Merged with Clk_gen:pulse|pulse_generator:PUL1|cnt[8]  ;
+; Clk_gen:pulse|pulse_generator:PUL2|cnt[7]  ; Merged with Clk_gen:pulse|pulse_generator:PUL1|cnt[7]  ;
+; Clk_gen:pulse|pulse_generator:PUL3|cnt[7]  ; Merged with Clk_gen:pulse|pulse_generator:PUL1|cnt[7]  ;
+; Clk_gen:pulse|pulse_generator:PUL2|cnt[6]  ; Merged with Clk_gen:pulse|pulse_generator:PUL1|cnt[6]  ;
+; Clk_gen:pulse|pulse_generator:PUL3|cnt[6]  ; Merged with Clk_gen:pulse|pulse_generator:PUL1|cnt[6]  ;
+; Clk_gen:pulse|pulse_generator:PUL2|cnt[5]  ; Merged with Clk_gen:pulse|pulse_generator:PUL1|cnt[5]  ;
+; Clk_gen:pulse|pulse_generator:PUL3|cnt[5]  ; Merged with Clk_gen:pulse|pulse_generator:PUL1|cnt[5]  ;
+; Clk_gen:pulse|pulse_generator:PUL2|cnt[4]  ; Merged with Clk_gen:pulse|pulse_generator:PUL1|cnt[4]  ;
+; Clk_gen:pulse|pulse_generator:PUL3|cnt[4]  ; Merged with Clk_gen:pulse|pulse_generator:PUL1|cnt[4]  ;
+; Clk_gen:pulse|pulse_generator:PUL2|cnt[3]  ; Merged with Clk_gen:pulse|pulse_generator:PUL1|cnt[3]  ;
+; Clk_gen:pulse|pulse_generator:PUL3|cnt[3]  ; Merged with Clk_gen:pulse|pulse_generator:PUL1|cnt[3]  ;
+; Clk_gen:pulse|pulse_generator:PUL2|cnt[2]  ; Merged with Clk_gen:pulse|pulse_generator:PUL1|cnt[2]  ;
+; Clk_gen:pulse|pulse_generator:PUL3|cnt[2]  ; Merged with Clk_gen:pulse|pulse_generator:PUL1|cnt[2]  ;
+; Clk_gen:pulse|pulse_generator:PUL2|cnt[1]  ; Merged with Clk_gen:pulse|pulse_generator:PUL1|cnt[1]  ;
+; Clk_gen:pulse|pulse_generator:PUL3|cnt[1]  ; Merged with Clk_gen:pulse|pulse_generator:PUL1|cnt[1]  ;
+; Clk_gen:pulse|pulse_generator:PUL2|cnt[0]  ; Merged with Clk_gen:pulse|pulse_generator:PUL1|cnt[0]  ;
+; Clk_gen:pulse|pulse_generator:PUL3|cnt[0]  ; Merged with Clk_gen:pulse|pulse_generator:PUL1|cnt[0]  ;
+; Total Number of Removed Registers = 97     ;                                                        ;
++--------------------------------------------+--------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 194   ;
+; Number of registers using Synchronous Clear  ; 66    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 56    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 120   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------+
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |DigitalW|watch:WCH|\flowtime:HH10[1]                        ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |DigitalW|watch:WCH|\flowtime:SS10[3]                        ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |DigitalW|watch:WCH|\flowtime:MM1[1]                         ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |DigitalW|watch:WCH|\flowtime:MM10[3]                        ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |DigitalW|Set_Time:WCH_Set|Key_Seq_Gen:KSG|time_cnt[20]      ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |DigitalW|Set_Time:ALM_Set|Key_Seq_Gen:KSG|time_cnt[30]      ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |DigitalW|Set_Time:WCH_Set|HM[10]                            ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |DigitalW|Set_Time:ALM_Set|HM[14]                            ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |DigitalW|Set_Time:WCH_Set|HM[6]                             ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |DigitalW|Set_Time:WCH_Set|HM[0]                             ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |DigitalW|Set_Time:ALM_Set|HM[7]                             ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |DigitalW|Set_Time:ALM_Set|HM[0]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; No         ; |DigitalW|MUX_4to1_24bit:MUX|MUX2to1_Nbits:MUX3|Data_out[7]  ;
+; 5:1                ; 16 bits   ; 48 LEs        ; 32 LEs               ; 16 LEs                 ; No         ; |DigitalW|MUX_4to1_24bit:MUX|MUX2to1_Nbits:MUX3|Data_out[16] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------+
+
+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Clk_gen:pulse ;
++----------------+-------+-----------------------------------+
+; Parameter Name ; Value ; Type                              ;
++----------------+-------+-----------------------------------+
+; selinhz        ; 1000  ; Signed Integer                    ;
++----------------+-------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Clk_gen:pulse|pulse_generator:PUL1 ;
++----------------+-------+--------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                   ;
++----------------+-------+--------------------------------------------------------+
+; inhz           ; 1000  ; Signed Integer                                         ;
+; outhz          ; 1     ; Signed Integer                                         ;
++----------------+-------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Clk_gen:pulse|pulse_generator:PUL2 ;
++----------------+-------+--------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                   ;
++----------------+-------+--------------------------------------------------------+
+; inhz           ; 1000  ; Signed Integer                                         ;
+; outhz          ; 100   ; Signed Integer                                         ;
++----------------+-------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Clk_gen:pulse|pulse_generator:PUL3 ;
++----------------+-------+--------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                   ;
++----------------+-------+--------------------------------------------------------+
+; inhz           ; 1000  ; Signed Integer                                         ;
+; outhz          ; 20    ; Signed Integer                                         ;
++----------------+-------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Nbits_Mode:Md ;
++----------------+-------+-----------------------------------+
+; Parameter Name ; Value ; Type                              ;
++----------------+-------+-----------------------------------+
+; n              ; 2     ; Signed Integer                    ;
++----------------+-------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Comparator:comp ;
++----------------+-------+-------------------------------------+
+; Parameter Name ; Value ; Type                                ;
++----------------+-------+-------------------------------------+
+; bits           ; 16    ; Signed Integer                      ;
++----------------+-------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: watch:WCH|MUX2to1_Nbits:MUX ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; n              ; 24    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: watch:WCH|MUX2to1_Nbits:OUTHM ;
++----------------+-------+---------------------------------------------------+
+; Parameter Name ; Value ; Type                                              ;
++----------------+-------+---------------------------------------------------+
+; n              ; 24    ; Signed Integer                                    ;
++----------------+-------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Set_Time:WCH_Set|MUX2to1_Nbits:Toggle ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; n              ; 1     ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Set_Time:WCH_Set|Nbits_Mode:selHM ;
++----------------+-------+-------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                  ;
++----------------+-------+-------------------------------------------------------+
+; n              ; 1     ; Signed Integer                                        ;
++----------------+-------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Set_Time:ALM_Set|MUX2to1_Nbits:Toggle ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; n              ; 1     ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Set_Time:ALM_Set|Nbits_Mode:selHM ;
++----------------+-------+-------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                  ;
++----------------+-------+-------------------------------------------------------+
+; n              ; 1     ; Signed Integer                                        ;
++----------------+-------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: stop_Watch:SWCH|Nbits_Mode:sel_OnOff ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; n              ; 1     ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: stop_Watch:SWCH|MUX2to1_Nbits:MUX ;
++----------------+-------+-------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                  ;
++----------------+-------+-------------------------------------------------------+
+; n              ; 24    ; Signed Integer                                        ;
++----------------+-------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: MUX_4to1_24bit:MUX|MUX2to1_Nbits:MUX1 ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; n              ; 24    ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: MUX_4to1_24bit:MUX|MUX2to1_Nbits:MUX2 ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; n              ; 24    ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: MUX_4to1_24bit:MUX|MUX2to1_Nbits:MUX3 ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; n              ; 24    ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: MUX2to1_Nbits:Blink5 ;
++----------------+-------+------------------------------------------+
+; Parameter Name ; Value ; Type                                     ;
++----------------+-------+------------------------------------------+
+; n              ; 7     ; Signed Integer                           ;
++----------------+-------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: MUX2to1_Nbits:Blink4 ;
++----------------+-------+------------------------------------------+
+; Parameter Name ; Value ; Type                                     ;
++----------------+-------+------------------------------------------+
+; n              ; 7     ; Signed Integer                           ;
++----------------+-------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: MUX2to1_Nbits:Blink3 ;
++----------------+-------+------------------------------------------+
+; Parameter Name ; Value ; Type                                     ;
++----------------+-------+------------------------------------------+
+; n              ; 7     ; Signed Integer                           ;
++----------------+-------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: MUX2to1_Nbits:Blink2 ;
++----------------+-------+------------------------------------------+
+; Parameter Name ; Value ; Type                                     ;
++----------------+-------+------------------------------------------+
+; n              ; 7     ; Signed Integer                           ;
++----------------+-------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: MUX2to1_Nbits:Blink1 ;
++----------------+-------+------------------------------------------+
+; Parameter Name ; Value ; Type                                     ;
++----------------+-------+------------------------------------------+
+; n              ; 7     ; Signed Integer                           ;
++----------------+-------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: MUX2to1_Nbits:Blink0 ;
++----------------+-------+------------------------------------------+
+; Parameter Name ; Value ; Type                                     ;
++----------------+-------+------------------------------------------+
+; n              ; 7     ; Signed Integer                           ;
++----------------+-------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Clk_gen:pulse|pulse_generator:PUL1|lpm_divide:Mod0 ;
++------------------------+----------------+-----------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                      ;
++------------------------+----------------+-----------------------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                                   ;
+; LPM_WIDTHD             ; 32             ; Untyped                                                   ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                                   ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                                   ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                   ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                                   ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                   ;
+; CBXI_PARAMETER         ; lpm_divide_cqo ; Untyped                                                   ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                   ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                   ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                              ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                              ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                            ;
++------------------------+----------------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Clk_gen:pulse|pulse_generator:PUL2|lpm_divide:Mod0 ;
++------------------------+----------------+-----------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                      ;
++------------------------+----------------+-----------------------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                                   ;
+; LPM_WIDTHD             ; 32             ; Untyped                                                   ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                                   ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                                   ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                   ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                                   ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                   ;
+; CBXI_PARAMETER         ; lpm_divide_cqo ; Untyped                                                   ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                   ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                   ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                              ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                              ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                            ;
++------------------------+----------------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Clk_gen:pulse|pulse_generator:PUL3|lpm_divide:Mod0 ;
++------------------------+----------------+-----------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                      ;
++------------------------+----------------+-----------------------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                                   ;
+; LPM_WIDTHD             ; 32             ; Untyped                                                   ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                                   ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                                   ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                   ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                                   ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                   ;
+; CBXI_PARAMETER         ; lpm_divide_cqo ; Untyped                                                   ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                   ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                   ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                              ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                              ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                            ;
++------------------------+----------------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------+
+; Port Connectivity Checks: "MUX2to1_Nbits:Blink0" ;
++----------+-------+----------+--------------------+
+; Port     ; Type  ; Severity ; Details            ;
++----------+-------+----------+--------------------+
+; data_in2 ; Input ; Info     ; Stuck at VCC       ;
++----------+-------+----------+--------------------+
+
+
++--------------------------------------------------+
+; Port Connectivity Checks: "MUX2to1_Nbits:Blink1" ;
++----------+-------+----------+--------------------+
+; Port     ; Type  ; Severity ; Details            ;
++----------+-------+----------+--------------------+
+; data_in2 ; Input ; Info     ; Stuck at VCC       ;
++----------+-------+----------+--------------------+
+
+
++--------------------------------------------------+
+; Port Connectivity Checks: "MUX2to1_Nbits:Blink2" ;
++----------+-------+----------+--------------------+
+; Port     ; Type  ; Severity ; Details            ;
++----------+-------+----------+--------------------+
+; data_in2 ; Input ; Info     ; Stuck at VCC       ;
++----------+-------+----------+--------------------+
+
+
++--------------------------------------------------+
+; Port Connectivity Checks: "MUX2to1_Nbits:Blink3" ;
++----------+-------+----------+--------------------+
+; Port     ; Type  ; Severity ; Details            ;
++----------+-------+----------+--------------------+
+; data_in2 ; Input ; Info     ; Stuck at VCC       ;
++----------+-------+----------+--------------------+
+
+
++--------------------------------------------------+
+; Port Connectivity Checks: "MUX2to1_Nbits:Blink4" ;
++----------+-------+----------+--------------------+
+; Port     ; Type  ; Severity ; Details            ;
++----------+-------+----------+--------------------+
+; data_in2 ; Input ; Info     ; Stuck at VCC       ;
++----------+-------+----------+--------------------+
+
+
++--------------------------------------------------+
+; Port Connectivity Checks: "MUX2to1_Nbits:Blink5" ;
++----------+-------+----------+--------------------+
+; Port     ; Type  ; Severity ; Details            ;
++----------+-------+----------+--------------------+
+; data_in2 ; Input ; Info     ; Stuck at VCC       ;
++----------+-------+----------+--------------------+
+
+
++------------------------------------------------+
+; Port Connectivity Checks: "MUX_4to1_24bit:MUX" ;
++-----------+-------+----------+-----------------+
+; Port      ; Type  ; Severity ; Details         ;
++-----------+-------+----------+-----------------+
+; in2[7..0] ; Input ; Info     ; Stuck at GND    ;
+; in3[7..0] ; Input ; Info     ; Stuck at GND    ;
++-----------+-------+----------+-----------------+
+
+
++---------------------------------------------------------------+
+; Port Connectivity Checks: "stop_Watch:SWCH|MUX2to1_Nbits:MUX" ;
++----------+-------+----------+---------------------------------+
+; Port     ; Type  ; Severity ; Details                         ;
++----------+-------+----------+---------------------------------+
+; data_in2 ; Input ; Info     ; Stuck at GND                    ;
++----------+-------+----------+---------------------------------+
+
+
++---------------------------------------------------------+
+; Port Connectivity Checks: "watch:WCH|MUX2to1_Nbits:MUX" ;
++----------------+-------+----------+---------------------+
+; Port           ; Type  ; Severity ; Details             ;
++----------------+-------+----------+---------------------+
+; data_in2[7..0] ; Input ; Info     ; Stuck at GND        ;
++----------------+-------+----------+---------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Comparator:comp"                                                                    ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; comp ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 47                          ;
+; cycloneiii_ff         ; 194                         ;
+;     ENA CLR           ; 56                          ;
+;     ENA SCLR          ; 64                          ;
+;     SCLR              ; 2                           ;
+;     plain             ; 72                          ;
+; cycloneiii_lcell_comb ; 5624                        ;
+;     arith             ; 1795                        ;
+;         2 data inputs ; 244                         ;
+;         3 data inputs ; 1551                        ;
+;     normal            ; 3829                        ;
+;         0 data inputs ; 83                          ;
+;         1 data inputs ; 16                          ;
+;         2 data inputs ; 1714                        ;
+;         3 data inputs ; 138                         ;
+;         4 data inputs ; 1878                        ;
+;                       ;                             ;
+; Max LUT depth         ; 134.60                      ;
+; Average LUT depth     ; 111.64                      ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:07     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Tue Nov 23 21:13:28 2021
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DigitalW -c DigitalW
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file digitalw.vhd
+    Info (12022): Found design unit 1: DigitalW-rtl File: C:/Users/dnf12/Desktop/dWatchProject/DigitalW.vhd Line: 13
+    Info (12023): Found entity 1: DigitalW File: C:/Users/dnf12/Desktop/dWatchProject/DigitalW.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file comparator.vhd
+    Info (12022): Found design unit 1: Comparator-comparison File: C:/Users/dnf12/Desktop/dWatchProject/Comparator.vhd Line: 13
+    Info (12023): Found entity 1: Comparator File: C:/Users/dnf12/Desktop/dWatchProject/Comparator.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file pulse_generator.vhd
+    Info (12022): Found design unit 1: pulse_generator-cntpulse File: C:/Users/dnf12/Desktop/dWatchProject/pulse_generator.vhd Line: 11
+    Info (12023): Found entity 1: pulse_generator File: C:/Users/dnf12/Desktop/dWatchProject/pulse_generator.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file debounce.vhd
+    Info (12022): Found design unit 1: DeBounce-DFF File: C:/Users/dnf12/Desktop/dWatchProject/DeBounce.vhd Line: 12
+    Info (12023): Found entity 1: DeBounce File: C:/Users/dnf12/Desktop/dWatchProject/DeBounce.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file clk_gen.vhd
+    Info (12022): Found design unit 1: Clk_gen-Generator File: C:/Users/dnf12/Desktop/dWatchProject/Clk_gen.vhd Line: 14
+    Info (12023): Found entity 1: Clk_gen File: C:/Users/dnf12/Desktop/dWatchProject/Clk_gen.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file clk_gen_tb.vhd
+    Info (12022): Found design unit 1: CLk_Gen_tb-tb File: C:/Users/dnf12/Desktop/dWatchProject/Clk_gen_tb.vhd Line: 7
+    Info (12023): Found entity 1: CLk_Gen_tb File: C:/Users/dnf12/Desktop/dWatchProject/Clk_gen_tb.vhd Line: 4
+Warning (12019): Can't analyze file -- file Mode.vhd is missing
+Info (12021): Found 2 design units, including 1 entities, in source file decoder2to4.vhd
+    Info (12022): Found design unit 1: decoder2to4-decode File: C:/Users/dnf12/Desktop/dWatchProject/decoder2to4.vhd Line: 11
+    Info (12023): Found entity 1: decoder2to4 File: C:/Users/dnf12/Desktop/dWatchProject/decoder2to4.vhd Line: 4
+Warning (12019): Can't analyze file -- file decoderNtoM.vhd is missing
+Info (12021): Found 2 design units, including 1 entities, in source file decoder_block.vhd
+    Info (12022): Found design unit 1: Decoder_Block-Decoder File: C:/Users/dnf12/Desktop/dWatchProject/Decoder_Block.vhd Line: 11
+    Info (12023): Found entity 1: Decoder_Block File: C:/Users/dnf12/Desktop/dWatchProject/Decoder_Block.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file segment_7.vhd
+    Info (12022): Found design unit 1: segment_7-seg File: C:/Users/dnf12/Desktop/dWatchProject/segment_7.vhd Line: 11
+    Info (12023): Found entity 1: segment_7 File: C:/Users/dnf12/Desktop/dWatchProject/segment_7.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file key_seq_gen.vhd
+    Info (12022): Found design unit 1: Key_Seq_Gen-set File: C:/Users/dnf12/Desktop/dWatchProject/Key_Seq_Gen.vhd Line: 12
+    Info (12023): Found entity 1: Key_Seq_Gen File: C:/Users/dnf12/Desktop/dWatchProject/Key_Seq_Gen.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file register_nbit.vhd
+    Info (12022): Found design unit 1: register_Nbit-reg File: C:/Users/dnf12/Desktop/dWatchProject/register_Nbit.vhd Line: 12
+    Info (12023): Found entity 1: register_Nbit File: C:/Users/dnf12/Desktop/dWatchProject/register_Nbit.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file watch.vhd
+    Info (12022): Found design unit 1: watch-wtc File: C:/Users/dnf12/Desktop/dWatchProject/Watch.vhd Line: 16
+    Info (12023): Found entity 1: watch File: C:/Users/dnf12/Desktop/dWatchProject/Watch.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file muxnto1_kbits.vhd
+    Info (12022): Found design unit 1: MUXNto1_Kbits-sel File: C:/Users/dnf12/Desktop/dWatchProject/MUXNto1_Kbits.vhd Line: 14
+    Info (12023): Found entity 1: MUXNto1_Kbits File: C:/Users/dnf12/Desktop/dWatchProject/MUXNto1_Kbits.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file mux2to1_nbits.vhd
+    Info (12022): Found design unit 1: MUX2to1_Nbits-sel File: C:/Users/dnf12/Desktop/dWatchProject/MUX2to1_Nbits.vhd Line: 12
+    Info (12023): Found entity 1: MUX2to1_Nbits File: C:/Users/dnf12/Desktop/dWatchProject/MUX2to1_Nbits.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file watch_tb.vhd
+    Info (12022): Found design unit 1: watch_tb-tb File: C:/Users/dnf12/Desktop/dWatchProject/Watch_tb.vhd Line: 9
+    Info (12023): Found entity 1: watch_tb File: C:/Users/dnf12/Desktop/dWatchProject/Watch_tb.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file tbb.vhd
+    Info (12022): Found design unit 1: tbb-tb File: C:/Users/dnf12/Desktop/dWatchProject/tbb.vhd Line: 7
+    Info (12023): Found entity 1: tbb File: C:/Users/dnf12/Desktop/dWatchProject/tbb.vhd Line: 4
+Warning (12019): Can't analyze file -- file Watch_Set.vhd is missing
+Info (12021): Found 2 design units, including 1 entities, in source file nbits_mode.vhd
+    Info (12022): Found design unit 1: Nbits_Mode-sel File: C:/Users/dnf12/Desktop/dWatchProject/Nbits_Mode.vhd Line: 14
+    Info (12023): Found entity 1: Nbits_Mode File: C:/Users/dnf12/Desktop/dWatchProject/Nbits_Mode.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file set_time.vhd
+    Info (12022): Found design unit 1: Set_Time-set File: C:/Users/dnf12/Desktop/dWatchProject/Set_Time.vhd Line: 18
+    Info (12023): Found entity 1: Set_Time File: C:/Users/dnf12/Desktop/dWatchProject/Set_Time.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file stop_watch.vhd
+    Info (12022): Found design unit 1: stop_Watch-STW File: C:/Users/dnf12/Desktop/dWatchProject/stop_Watch.vhd Line: 16
+    Info (12023): Found entity 1: stop_Watch File: C:/Users/dnf12/Desktop/dWatchProject/stop_Watch.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file mux4to1_24bit.vhd
+    Info (12022): Found design unit 1: MUX_4to1_24bit-selec File: C:/Users/dnf12/Desktop/dWatchProject/MUX4to1_24bit.vhd Line: 13
+    Info (12023): Found entity 1: MUX_4to1_24bit File: C:/Users/dnf12/Desktop/dWatchProject/MUX4to1_24bit.vhd Line: 4
+Info (12021): Found 1 design units, including 0 entities, in source file dwatch_components.vhd
+    Info (12022): Found design unit 1: dWatch_components File: C:/Users/dnf12/Desktop/dWatchProject/dWatch_components.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file dwatch_tb.vhd
+    Info (12022): Found design unit 1: dWatch_tb-tb File: C:/Users/dnf12/Desktop/dWatchProject/dwatch_tb.vhd Line: 7
+    Info (12023): Found entity 1: dWatch_tb File: C:/Users/dnf12/Desktop/dWatchProject/dwatch_tb.vhd Line: 4
+Info (12127): Elaborating entity "DigitalW" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at DigitalW.vhd(19): object "BuzzOn" assigned a value but never read File: C:/Users/dnf12/Desktop/dWatchProject/DigitalW.vhd Line: 19
+Info (12128): Elaborating entity "Clk_gen" for hierarchy "Clk_gen:pulse" File: C:/Users/dnf12/Desktop/dWatchProject/DigitalW.vhd Line: 27
+Info (12128): Elaborating entity "pulse_generator" for hierarchy "Clk_gen:pulse|pulse_generator:PUL1" File: C:/Users/dnf12/Desktop/dWatchProject/Clk_gen.vhd Line: 21
+Info (12128): Elaborating entity "pulse_generator" for hierarchy "Clk_gen:pulse|pulse_generator:PUL2" File: C:/Users/dnf12/Desktop/dWatchProject/Clk_gen.vhd Line: 22
+Info (12128): Elaborating entity "pulse_generator" for hierarchy "Clk_gen:pulse|pulse_generator:PUL3" File: C:/Users/dnf12/Desktop/dWatchProject/Clk_gen.vhd Line: 23
+Info (12128): Elaborating entity "DeBounce" for hierarchy "DeBounce:DeB" File: C:/Users/dnf12/Desktop/dWatchProject/DigitalW.vhd Line: 29
+Info (12128): Elaborating entity "Nbits_Mode" for hierarchy "Nbits_Mode:Md" File: C:/Users/dnf12/Desktop/dWatchProject/DigitalW.vhd Line: 31
+Info (12128): Elaborating entity "decoder2to4" for hierarchy "decoder2to4:selEn" File: C:/Users/dnf12/Desktop/dWatchProject/DigitalW.vhd Line: 33
+Info (12128): Elaborating entity "Comparator" for hierarchy "Comparator:comp" File: C:/Users/dnf12/Desktop/dWatchProject/DigitalW.vhd Line: 35
+Info (12128): Elaborating entity "watch" for hierarchy "watch:WCH" File: C:/Users/dnf12/Desktop/dWatchProject/DigitalW.vhd Line: 39
+Warning (10785): VHDL warning at Watch.vhd(92): synthesis ignores all but the first waveform File: C:/Users/dnf12/Desktop/dWatchProject/Watch.vhd Line: 92
+Info (12128): Elaborating entity "MUX2to1_Nbits" for hierarchy "watch:WCH|MUX2to1_Nbits:MUX" File: C:/Users/dnf12/Desktop/dWatchProject/Watch.vhd Line: 34
+Info (12128): Elaborating entity "Set_Time" for hierarchy "Set_Time:WCH_Set" File: C:/Users/dnf12/Desktop/dWatchProject/DigitalW.vhd Line: 41
+Warning (10492): VHDL Process Statement warning at Set_Time.vhd(66): signal "en" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/dnf12/Desktop/dWatchProject/Set_Time.vhd Line: 66
+Warning (10492): VHDL Process Statement warning at Set_Time.vhd(92): signal "HM" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/dnf12/Desktop/dWatchProject/Set_Time.vhd Line: 92
+Warning (10492): VHDL Process Statement warning at Set_Time.vhd(96): signal "en" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/dnf12/Desktop/dWatchProject/Set_Time.vhd Line: 96
+Warning (10492): VHDL Process Statement warning at Set_Time.vhd(97): signal "SHM" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/dnf12/Desktop/dWatchProject/Set_Time.vhd Line: 97
+Warning (10492): VHDL Process Statement warning at Set_Time.vhd(98): signal "SHM" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/dnf12/Desktop/dWatchProject/Set_Time.vhd Line: 98
+Warning (10492): VHDL Process Statement warning at Set_Time.vhd(99): signal "SHM" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/dnf12/Desktop/dWatchProject/Set_Time.vhd Line: 99
+Warning (10492): VHDL Process Statement warning at Set_Time.vhd(100): signal "SHM" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/dnf12/Desktop/dWatchProject/Set_Time.vhd Line: 100
+Warning (10492): VHDL Process Statement warning at Set_Time.vhd(101): signal "SHM" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/dnf12/Desktop/dWatchProject/Set_Time.vhd Line: 101
+Warning (10631): VHDL Process Statement warning at Set_Time.vhd(62): inferring latch(es) for signal or variable "SHM", which holds its previous value in one or more paths through the process File: C:/Users/dnf12/Desktop/dWatchProject/Set_Time.vhd Line: 62
+Info (10041): Inferred latch for "SHM[0]" at Set_Time.vhd(62) File: C:/Users/dnf12/Desktop/dWatchProject/Set_Time.vhd Line: 62
+Info (10041): Inferred latch for "SHM[1]" at Set_Time.vhd(62) File: C:/Users/dnf12/Desktop/dWatchProject/Set_Time.vhd Line: 62
+Info (10041): Inferred latch for "SHM[2]" at Set_Time.vhd(62) File: C:/Users/dnf12/Desktop/dWatchProject/Set_Time.vhd Line: 62
+Info (10041): Inferred latch for "SHM[3]" at Set_Time.vhd(62) File: C:/Users/dnf12/Desktop/dWatchProject/Set_Time.vhd Line: 62
+Info (10041): Inferred latch for "SHM[4]" at Set_Time.vhd(62) File: C:/Users/dnf12/Desktop/dWatchProject/Set_Time.vhd Line: 62
+Info (10041): Inferred latch for "SHM[5]" at Set_Time.vhd(62) File: C:/Users/dnf12/Desktop/dWatchProject/Set_Time.vhd Line: 62
+Info (10041): Inferred latch for "SHM[6]" at Set_Time.vhd(62) File: C:/Users/dnf12/Desktop/dWatchProject/Set_Time.vhd Line: 62
+Info (10041): Inferred latch for "SHM[7]" at Set_Time.vhd(62) File: C:/Users/dnf12/Desktop/dWatchProject/Set_Time.vhd Line: 62
+Info (10041): Inferred latch for "SHM[8]" at Set_Time.vhd(62) File: C:/Users/dnf12/Desktop/dWatchProject/Set_Time.vhd Line: 62
+Info (10041): Inferred latch for "SHM[9]" at Set_Time.vhd(62) File: C:/Users/dnf12/Desktop/dWatchProject/Set_Time.vhd Line: 62
+Info (10041): Inferred latch for "SHM[10]" at Set_Time.vhd(62) File: C:/Users/dnf12/Desktop/dWatchProject/Set_Time.vhd Line: 62
+Info (10041): Inferred latch for "SHM[11]" at Set_Time.vhd(62) File: C:/Users/dnf12/Desktop/dWatchProject/Set_Time.vhd Line: 62
+Info (10041): Inferred latch for "SHM[12]" at Set_Time.vhd(62) File: C:/Users/dnf12/Desktop/dWatchProject/Set_Time.vhd Line: 62
+Info (10041): Inferred latch for "SHM[13]" at Set_Time.vhd(62) File: C:/Users/dnf12/Desktop/dWatchProject/Set_Time.vhd Line: 62
+Info (10041): Inferred latch for "SHM[14]" at Set_Time.vhd(62) File: C:/Users/dnf12/Desktop/dWatchProject/Set_Time.vhd Line: 62
+Info (10041): Inferred latch for "SHM[15]" at Set_Time.vhd(62) File: C:/Users/dnf12/Desktop/dWatchProject/Set_Time.vhd Line: 62
+Info (12128): Elaborating entity "Key_Seq_Gen" for hierarchy "Set_Time:WCH_Set|Key_Seq_Gen:KSG" File: C:/Users/dnf12/Desktop/dWatchProject/Set_Time.vhd Line: 52
+Info (12128): Elaborating entity "MUX2to1_Nbits" for hierarchy "Set_Time:WCH_Set|MUX2to1_Nbits:Toggle" File: C:/Users/dnf12/Desktop/dWatchProject/Set_Time.vhd Line: 56
+Info (12128): Elaborating entity "Nbits_Mode" for hierarchy "Set_Time:WCH_Set|Nbits_Mode:selHM" File: C:/Users/dnf12/Desktop/dWatchProject/Set_Time.vhd Line: 57
+Info (12128): Elaborating entity "stop_Watch" for hierarchy "stop_Watch:SWCH" File: C:/Users/dnf12/Desktop/dWatchProject/DigitalW.vhd Line: 45
+Info (12128): Elaborating entity "MUX_4to1_24bit" for hierarchy "MUX_4to1_24bit:MUX" File: C:/Users/dnf12/Desktop/dWatchProject/DigitalW.vhd Line: 47
+Info (12128): Elaborating entity "Decoder_Block" for hierarchy "Decoder_Block:Decoder" File: C:/Users/dnf12/Desktop/dWatchProject/DigitalW.vhd Line: 49
+Info (12128): Elaborating entity "segment_7" for hierarchy "Decoder_Block:Decoder|segment_7:O5" File: C:/Users/dnf12/Desktop/dWatchProject/Decoder_Block.vhd Line: 28
+Info (12128): Elaborating entity "MUX2to1_Nbits" for hierarchy "MUX2to1_Nbits:Blink5" File: C:/Users/dnf12/Desktop/dWatchProject/DigitalW.vhd Line: 51
+Warning (19016): Clock multiplexers are found and protected
+    Warning (19017): Found clock multiplexer Set_Time:ALM_Set|MUX2to1_Nbits:Toggle|Data_out[0] File: C:/Users/dnf12/Desktop/dWatchProject/MUX2to1_Nbits.vhd Line: 9
+    Warning (19017): Found clock multiplexer Set_Time:WCH_Set|MUX2to1_Nbits:Toggle|Data_out[0] File: C:/Users/dnf12/Desktop/dWatchProject/MUX2to1_Nbits.vhd Line: 9
+Info (278001): Inferred 3 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Clk_gen:pulse|pulse_generator:PUL1|Mod0" File: C:/Users/dnf12/Desktop/dWatchProject/pulse_generator.vhd Line: 19
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Clk_gen:pulse|pulse_generator:PUL2|Mod0" File: C:/Users/dnf12/Desktop/dWatchProject/pulse_generator.vhd Line: 19
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Clk_gen:pulse|pulse_generator:PUL3|Mod0" File: C:/Users/dnf12/Desktop/dWatchProject/pulse_generator.vhd Line: 19
+Info (12130): Elaborated megafunction instantiation "Clk_gen:pulse|pulse_generator:PUL1|lpm_divide:Mod0" File: C:/Users/dnf12/Desktop/dWatchProject/pulse_generator.vhd Line: 19
+Info (12133): Instantiated megafunction "Clk_gen:pulse|pulse_generator:PUL1|lpm_divide:Mod0" with the following parameter: File: C:/Users/dnf12/Desktop/dWatchProject/pulse_generator.vhd Line: 19
+    Info (12134): Parameter "LPM_WIDTHN" = "32"
+    Info (12134): Parameter "LPM_WIDTHD" = "32"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_cqo.tdf
+    Info (12023): Found entity 1: lpm_divide_cqo File: C:/Users/dnf12/Desktop/dWatchProject/db/lpm_divide_cqo.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/abs_divider_4dg.tdf
+    Info (12023): Found entity 1: abs_divider_4dg File: C:/Users/dnf12/Desktop/dWatchProject/db/abs_divider_4dg.tdf Line: 27
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_6af.tdf
+    Info (12023): Found entity 1: alt_u_div_6af File: C:/Users/dnf12/Desktop/dWatchProject/db/alt_u_div_6af.tdf Line: 27
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_7pc.tdf
+    Info (12023): Found entity 1: add_sub_7pc File: C:/Users/dnf12/Desktop/dWatchProject/db/add_sub_7pc.tdf Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_8pc.tdf
+    Info (12023): Found entity 1: add_sub_8pc File: C:/Users/dnf12/Desktop/dWatchProject/db/add_sub_8pc.tdf Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_i0a.tdf
+    Info (12023): Found entity 1: lpm_abs_i0a File: C:/Users/dnf12/Desktop/dWatchProject/db/lpm_abs_i0a.tdf Line: 25
+Info (12130): Elaborated megafunction instantiation "Clk_gen:pulse|pulse_generator:PUL2|lpm_divide:Mod0" File: C:/Users/dnf12/Desktop/dWatchProject/pulse_generator.vhd Line: 19
+Info (12133): Instantiated megafunction "Clk_gen:pulse|pulse_generator:PUL2|lpm_divide:Mod0" with the following parameter: File: C:/Users/dnf12/Desktop/dWatchProject/pulse_generator.vhd Line: 19
+    Info (12134): Parameter "LPM_WIDTHN" = "32"
+    Info (12134): Parameter "LPM_WIDTHD" = "32"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
+Info (12130): Elaborated megafunction instantiation "Clk_gen:pulse|pulse_generator:PUL3|lpm_divide:Mod0" File: C:/Users/dnf12/Desktop/dWatchProject/pulse_generator.vhd Line: 19
+Info (12133): Instantiated megafunction "Clk_gen:pulse|pulse_generator:PUL3|lpm_divide:Mod0" with the following parameter: File: C:/Users/dnf12/Desktop/dWatchProject/pulse_generator.vhd Line: 19
+    Info (12134): Parameter "LPM_WIDTHN" = "32"
+    Info (12134): Parameter "LPM_WIDTHD" = "32"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
+Info (13014): Ignored 93 buffer(s)
+    Info (13016): Ignored 93 CARRY_SUM buffer(s)
+Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
+    Warning (13310): Register "Set_Time:ALM_Set|HM[12]" is converted into an equivalent circuit using register "Set_Time:ALM_Set|HM[12]~_emulated" and latch "Set_Time:ALM_Set|HM[12]~1" File: C:/Users/dnf12/Desktop/dWatchProject/Set_Time.vhd Line: 66
+    Warning (13310): Register "Set_Time:WCH_Set|HM[12]" is converted into an equivalent circuit using register "Set_Time:WCH_Set|HM[12]~_emulated" and latch "Set_Time:WCH_Set|HM[12]~1" File: C:/Users/dnf12/Desktop/dWatchProject/Set_Time.vhd Line: 66
+    Warning (13310): Register "Set_Time:ALM_Set|HM[13]" is converted into an equivalent circuit using register "Set_Time:ALM_Set|HM[13]~_emulated" and latch "Set_Time:ALM_Set|HM[13]~5" File: C:/Users/dnf12/Desktop/dWatchProject/Set_Time.vhd Line: 66
+    Warning (13310): Register "Set_Time:WCH_Set|HM[13]" is converted into an equivalent circuit using register "Set_Time:WCH_Set|HM[13]~_emulated" and latch "Set_Time:WCH_Set|HM[13]~5" File: C:/Users/dnf12/Desktop/dWatchProject/Set_Time.vhd Line: 66
+    Warning (13310): Register "Set_Time:ALM_Set|HM[14]" is converted into an equivalent circuit using register "Set_Time:ALM_Set|HM[14]~_emulated" and latch "Set_Time:ALM_Set|HM[14]~9" File: C:/Users/dnf12/Desktop/dWatchProject/Set_Time.vhd Line: 66
+    Warning (13310): Register "Set_Time:WCH_Set|HM[14]" is converted into an equivalent circuit using register "Set_Time:WCH_Set|HM[14]~_emulated" and latch "Set_Time:WCH_Set|HM[14]~9" File: C:/Users/dnf12/Desktop/dWatchProject/Set_Time.vhd Line: 66
+    Warning (13310): Register "Set_Time:ALM_Set|HM[15]" is converted into an equivalent circuit using register "Set_Time:ALM_Set|HM[15]~_emulated" and latch "Set_Time:ALM_Set|HM[15]~13" File: C:/Users/dnf12/Desktop/dWatchProject/Set_Time.vhd Line: 66
+    Warning (13310): Register "Set_Time:WCH_Set|HM[15]" is converted into an equivalent circuit using register "Set_Time:WCH_Set|HM[15]~_emulated" and latch "Set_Time:WCH_Set|HM[15]~13" File: C:/Users/dnf12/Desktop/dWatchProject/Set_Time.vhd Line: 66
+    Warning (13310): Register "Set_Time:ALM_Set|HM[8]" is converted into an equivalent circuit using register "Set_Time:ALM_Set|HM[8]~_emulated" and latch "Set_Time:ALM_Set|HM[8]~17" File: C:/Users/dnf12/Desktop/dWatchProject/Set_Time.vhd Line: 66
+    Warning (13310): Register "Set_Time:WCH_Set|HM[8]" is converted into an equivalent circuit using register "Set_Time:WCH_Set|HM[8]~_emulated" and latch "Set_Time:WCH_Set|HM[8]~17" File: C:/Users/dnf12/Desktop/dWatchProject/Set_Time.vhd Line: 66
+    Warning (13310): Register "Set_Time:ALM_Set|HM[9]" is converted into an equivalent circuit using register "Set_Time:ALM_Set|HM[9]~_emulated" and latch "Set_Time:ALM_Set|HM[9]~21" File: C:/Users/dnf12/Desktop/dWatchProject/Set_Time.vhd Line: 66
+    Warning (13310): Register "Set_Time:WCH_Set|HM[9]" is converted into an equivalent circuit using register "Set_Time:WCH_Set|HM[9]~_emulated" and latch "Set_Time:WCH_Set|HM[9]~21" File: C:/Users/dnf12/Desktop/dWatchProject/Set_Time.vhd Line: 66
+    Warning (13310): Register "Set_Time:ALM_Set|HM[10]" is converted into an equivalent circuit using register "Set_Time:ALM_Set|HM[10]~_emulated" and latch "Set_Time:ALM_Set|HM[10]~25" File: C:/Users/dnf12/Desktop/dWatchProject/Set_Time.vhd Line: 66
+    Warning (13310): Register "Set_Time:WCH_Set|HM[10]" is converted into an equivalent circuit using register "Set_Time:WCH_Set|HM[10]~_emulated" and latch "Set_Time:WCH_Set|HM[10]~25" File: C:/Users/dnf12/Desktop/dWatchProject/Set_Time.vhd Line: 66
+    Warning (13310): Register "Set_Time:ALM_Set|HM[11]" is converted into an equivalent circuit using register "Set_Time:ALM_Set|HM[11]~_emulated" and latch "Set_Time:ALM_Set|HM[11]~29" File: C:/Users/dnf12/Desktop/dWatchProject/Set_Time.vhd Line: 66
+    Warning (13310): Register "Set_Time:WCH_Set|HM[11]" is converted into an equivalent circuit using register "Set_Time:WCH_Set|HM[11]~_emulated" and latch "Set_Time:WCH_Set|HM[11]~29" File: C:/Users/dnf12/Desktop/dWatchProject/Set_Time.vhd Line: 66
+    Warning (13310): Register "Set_Time:ALM_Set|HM[4]" is converted into an equivalent circuit using register "Set_Time:ALM_Set|HM[4]~_emulated" and latch "Set_Time:ALM_Set|HM[4]~33" File: C:/Users/dnf12/Desktop/dWatchProject/Set_Time.vhd Line: 66
+    Warning (13310): Register "Set_Time:WCH_Set|HM[4]" is converted into an equivalent circuit using register "Set_Time:WCH_Set|HM[4]~_emulated" and latch "Set_Time:WCH_Set|HM[4]~33" File: C:/Users/dnf12/Desktop/dWatchProject/Set_Time.vhd Line: 66
+    Warning (13310): Register "Set_Time:ALM_Set|HM[5]" is converted into an equivalent circuit using register "Set_Time:ALM_Set|HM[5]~_emulated" and latch "Set_Time:ALM_Set|HM[5]~37" File: C:/Users/dnf12/Desktop/dWatchProject/Set_Time.vhd Line: 66
+    Warning (13310): Register "Set_Time:WCH_Set|HM[5]" is converted into an equivalent circuit using register "Set_Time:WCH_Set|HM[5]~_emulated" and latch "Set_Time:WCH_Set|HM[5]~37" File: C:/Users/dnf12/Desktop/dWatchProject/Set_Time.vhd Line: 66
+    Warning (13310): Register "Set_Time:ALM_Set|HM[6]" is converted into an equivalent circuit using register "Set_Time:ALM_Set|HM[6]~_emulated" and latch "Set_Time:ALM_Set|HM[6]~41" File: C:/Users/dnf12/Desktop/dWatchProject/Set_Time.vhd Line: 66
+    Warning (13310): Register "Set_Time:WCH_Set|HM[6]" is converted into an equivalent circuit using register "Set_Time:WCH_Set|HM[6]~_emulated" and latch "Set_Time:WCH_Set|HM[6]~41" File: C:/Users/dnf12/Desktop/dWatchProject/Set_Time.vhd Line: 66
+    Warning (13310): Register "Set_Time:ALM_Set|HM[7]" is converted into an equivalent circuit using register "Set_Time:ALM_Set|HM[7]~_emulated" and latch "Set_Time:ALM_Set|HM[7]~45" File: C:/Users/dnf12/Desktop/dWatchProject/Set_Time.vhd Line: 66
+    Warning (13310): Register "Set_Time:WCH_Set|HM[7]" is converted into an equivalent circuit using register "Set_Time:WCH_Set|HM[7]~_emulated" and latch "Set_Time:WCH_Set|HM[7]~45" File: C:/Users/dnf12/Desktop/dWatchProject/Set_Time.vhd Line: 66
+    Warning (13310): Register "Set_Time:ALM_Set|HM[0]" is converted into an equivalent circuit using register "Set_Time:ALM_Set|HM[0]~_emulated" and latch "Set_Time:ALM_Set|HM[0]~49" File: C:/Users/dnf12/Desktop/dWatchProject/Set_Time.vhd Line: 66
+    Warning (13310): Register "Set_Time:WCH_Set|HM[0]" is converted into an equivalent circuit using register "Set_Time:WCH_Set|HM[0]~_emulated" and latch "Set_Time:WCH_Set|HM[0]~49" File: C:/Users/dnf12/Desktop/dWatchProject/Set_Time.vhd Line: 66
+    Warning (13310): Register "Set_Time:ALM_Set|HM[1]" is converted into an equivalent circuit using register "Set_Time:ALM_Set|HM[1]~_emulated" and latch "Set_Time:ALM_Set|HM[1]~53" File: C:/Users/dnf12/Desktop/dWatchProject/Set_Time.vhd Line: 66
+    Warning (13310): Register "Set_Time:WCH_Set|HM[1]" is converted into an equivalent circuit using register "Set_Time:WCH_Set|HM[1]~_emulated" and latch "Set_Time:WCH_Set|HM[1]~53" File: C:/Users/dnf12/Desktop/dWatchProject/Set_Time.vhd Line: 66
+    Warning (13310): Register "Set_Time:ALM_Set|HM[2]" is converted into an equivalent circuit using register "Set_Time:ALM_Set|HM[2]~_emulated" and latch "Set_Time:ALM_Set|HM[2]~57" File: C:/Users/dnf12/Desktop/dWatchProject/Set_Time.vhd Line: 66
+    Warning (13310): Register "Set_Time:WCH_Set|HM[2]" is converted into an equivalent circuit using register "Set_Time:WCH_Set|HM[2]~_emulated" and latch "Set_Time:WCH_Set|HM[2]~57" File: C:/Users/dnf12/Desktop/dWatchProject/Set_Time.vhd Line: 66
+    Warning (13310): Register "Set_Time:ALM_Set|HM[3]" is converted into an equivalent circuit using register "Set_Time:ALM_Set|HM[3]~_emulated" and latch "Set_Time:ALM_Set|HM[3]~61" File: C:/Users/dnf12/Desktop/dWatchProject/Set_Time.vhd Line: 66
+    Warning (13310): Register "Set_Time:WCH_Set|HM[3]" is converted into an equivalent circuit using register "Set_Time:WCH_Set|HM[3]~_emulated" and latch "Set_Time:WCH_Set|HM[3]~61" File: C:/Users/dnf12/Desktop/dWatchProject/Set_Time.vhd Line: 66
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 5714 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 5 input pins
+    Info (21059): Implemented 42 output pins
+    Info (21061): Implemented 5667 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 51 warnings
+    Info: Peak virtual memory: 4857 megabytes
+    Info: Processing ended: Tue Nov 23 21:13:56 2021
+    Info: Elapsed time: 00:00:28
+    Info: Total CPU time (on all processors): 00:00:33
+
+

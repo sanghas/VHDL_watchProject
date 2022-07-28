@@ -1,0 +1,71 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity dWatch_tb is
+end dWatch_tb;
+
+architecture tb of dWatch_tb is
+
+component DigitalW is
+port(
+	 Key1, Key2, Key3, Key4: in std_logic;			
+	 Mclk: in std_logic;		-- 2MHz
+	 visible_Out5, visible_Out4, visible_Out3, visible_Out2, visible_Out1, visible_Out0: out std_logic_vector (6 downto 0)
+	 );
+end component;
+
+signal Key1_in, Key2_in, Key3_in, Key4_in : std_logic := '0' ;
+signal Mclk_in : std_logic;
+signal visible_Out5_out, visible_Out4_out, visible_Out3_out, visible_Out2_out, visible_Out1_out, visible_Out0_out : std_logic_vector(6 downto 0);
+
+begin
+DUT : DigitalW port map (Key1_in, Key2_in, Key3_in, Key4_in, Mclk_in,visible_Out5_out, visible_Out4_out, visible_Out3_out, visible_Out2_out, visible_Out1_out, visible_Out0_out );
+Mclk : process begin
+	Mclk_in <= '1';
+	wait for 0.25 ms;
+	Mclk_in <= '0';
+	wait for 0.25 ms;
+end process Mclk;
+
+Key : process begin
+	wait for 3 sec;
+	--Watch_set--
+	key1_in <= '1'; wait for 145 ms; Key1_in <= '0';	
+	wait for 1 sec;
+	key3_in <= '1'; wait for 2 sec; key3_in <= '0';		
+	wait for 1 sec;
+	key2_in <= '1'; wait for 138 ms; key2_in <= '0';
+	wait for 1 sec;
+	key3_in <= '1'; wait for 2 sec; key3_in <= '0';
+	wait for 1 sec;
+	key4_in <= '1'; wait for 300 ms; key4_in <= '0';
+	wait for 1 sec;
+	--Alarm_Set--
+	key1_in <= '1'; wait for 145 ms; Key1_in <= '0';
+	wait for 3 sec;
+	--StopWatch--
+	key1_in <= '1'; wait for 145 ms; Key1_in <= '0';
+	wait for 1 sec;
+	key2_in <= '1'; wait for 145 ms; Key2_in <= '0';	--run
+	wait for 1 sec;
+	--Watch--
+	key1_in <= '1'; wait for 145 ms; Key1_in <= '0';
+	wait for 1 sec;
+	--WatchSet--
+	key1_in <= '1'; wait for 145 ms; Key1_in <= '0';
+	wait for 1 sec;
+	--AlarmSet--
+	key1_in <= '1'; wait for 145 ms; Key1_in <= '0';
+	wait for 1 sec;
+	--Stop_Watch--
+	key1_in <= '1'; wait for 145 ms; Key1_in <= '0';
+	wait for 1 sec;
+	key2_in <= '1'; wait for 145 ms; Key2_in <= '0';	-- stop
+	wait for 1 sec;
+	key3_in <= '1'; wait for 145 ms; Key3_in <= '0';
+	wait for 1 sec;
+	wait;
+	
+end process Key;
+	
+end tb;

@@ -1,0 +1,25 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.NUMERIC_std.all;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+entity decoderNtoM is
+	generic( N : integer;
+				M : integer := 2 ** N);
+	port(	D_in : in std_logic (N-1 downto 0)
+			sel : in std_logic;
+			D_out : out std_logic (M-1 downto 0);
+end decoderNtoM;
+
+architecture sel_val of decoderNtoM is
+
+begin
+process(sel)
+variable selnum : std_logic (N-1 downto 0) := 0;
+	if(rising_edge(sel))	then
+		selnum := selnum + 1;
+	end if;
+	D_out <= selnum;
+end process;
+end sel_val;
+		

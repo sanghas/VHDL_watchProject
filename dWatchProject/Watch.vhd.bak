@@ -1,0 +1,59 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.NUMERIC_std.all;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+entity watch is
+port(
+	en : in std_logic; 		--WatchSetEn
+	In_HM : in std_logic_vector (15 downto 0);
+	clk : in std_logic;		-- clk_1sec
+	Ld_n : in std_logic;		-- watch_set data load key4
+	Out_HMS :out std_logic_vector (23 downto 0)
+	);
+end watch;
+
+architecture wtc of watch is
+begin
+
+flowtime : process(clk)
+variable HH10, HH1, MM10, MM1, SS10, SS1 : std_logic_vector (3 downto 0) := "0000";
+begin
+	if(rising_edge(clk)) then
+		SS1 := SS1 + "0001";
+		if(SS1 = "1010") then
+			SS1 := "0000"; SS10 := SS10 + "0001";
+			if(SS10 = "0110")	then
+				SS10 := "0000"; MM1 := MM1 +"0001"; 
+				if(MM1 = "1010") then
+					MM1 := "0000"; MM10 := MM10 + "0001";
+					if(MM10 = "0110")	then
+						MM10 := "0000"; HH1 := HH1 +"0001";
+						if(HH1 = "1010")	then
+							HH1 := "0000"; HH10 := HH10 +"0001";
+						end if;
+						if(HH10 = "0010" and HH1 = "0100") then
+							HH1 := "0000"; HH10 := "0000";
+						end if;
+					end if;
+				end if;
+			end if;
+		end if;
+	end if;
+	Out_HMS(23 downto 20) <= HH10;
+	Out_HMS(19 downto 16) <= HH1;
+	Out_HMS(15 downto 12) <= MM10;
+	Out_HMS(11 downto 8) <= MM1;
+	Out_HMS(7 downto 4) <= SS10;
+	Out_HMS(3 downto 0) <= SS1;
+end process flowtime;	
+
+time_set : process(Ld_n)
+begin
+		if(falling_edge(Ld_n)) then
+			HH10 := In_HM(15 downto 12);
+			HH1 := In_HM(11 downto 8);
+			MM10 := In_HM(7 downto 4);
+			MM1 := In_HM(3 downto 0);
+		end if;
+end wtc;

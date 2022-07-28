@@ -1,0 +1,145 @@
+C:/Users/dnf12/Desktop/dWatchProject/MUX2to1_Nbits.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/dnf12/Desktop/dWatchProject/MUX2to1_Nbits.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity MUX2to1_Nbits
+-- Compiling architecture sel of MUX2to1_Nbits
+
+} {} {}} C:/Users/dnf12/Desktop/dWatchProject/pulse_generator.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/dnf12/Desktop/dWatchProject/pulse_generator.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity pulse_generator
+-- Compiling architecture cntpulse of pulse_generator
+
+} {} {}} C:/Users/dnf12/Desktop/dWatchProject/dWatch_components.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/dnf12/Desktop/dWatchProject/dWatch_components.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling package dWatch_components
+
+} {} {}} C:/Users/dnf12/Desktop/dWatchProject/Decoder_Block.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/dnf12/Desktop/dWatchProject/Decoder_Block.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity Decoder_Block
+-- Compiling architecture Decoder of Decoder_Block
+
+} {} {}} C:/Users/dnf12/Desktop/dWatchProject/tbb.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/dnf12/Desktop/dWatchProject/tbb.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity tbb
+-- Compiling architecture tb of tbb
+
+} {} {}} C:/Users/dnf12/Desktop/dWatchProject/Clk_gen_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/dnf12/Desktop/dWatchProject/Clk_gen_tb.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity CLk_Gen_tb
+-- Compiling architecture tb of CLk_Gen_tb
+
+} {} {}} C:/Users/dnf12/Desktop/dWatchProject/Comparator.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/dnf12/Desktop/dWatchProject/Comparator.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity Comparator
+-- Compiling architecture comparison of Comparator
+
+} {} {}} C:/Users/dnf12/Desktop/dWatchProject/register_Nbit.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/dnf12/Desktop/dWatchProject/register_Nbit.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity register_Nbit
+-- Compiling architecture reg of register_Nbit
+
+} {} {}} C:/Users/dnf12/Desktop/dWatchProject/Watch_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/dnf12/Desktop/dWatchProject/Watch_tb.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity watch_tb
+-- Compiling architecture tb of watch_tb
+
+} {} {}} C:/Users/dnf12/Desktop/dWatchProject/DeBounce.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/dnf12/Desktop/dWatchProject/DeBounce.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity DeBounce
+-- Compiling architecture DFF of DeBounce
+
+} {} {}} C:/Users/dnf12/Desktop/dWatchProject/decoder2to4.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/dnf12/Desktop/dWatchProject/decoder2to4.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity decoder2to4
+-- Compiling architecture decode of decoder2to4
+
+} {} {}} C:/Users/dnf12/Desktop/dWatchProject/MUXNto1_Kbits.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/dnf12/Desktop/dWatchProject/MUXNto1_Kbits.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity MUXNto1_Kbits
+-- Compiling architecture sel of MUXNto1_Kbits
+
+} {} {}} C:/Users/dnf12/Desktop/dWatchProject/segment_7.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/dnf12/Desktop/dWatchProject/segment_7.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity segment_7
+-- Compiling architecture seg of segment_7
+
+} {} {}} C:/Users/dnf12/Desktop/dWatchProject/Key_Seq_Gen.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/dnf12/Desktop/dWatchProject/Key_Seq_Gen.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity Key_Seq_Gen
+-- Compiling architecture set of Key_Seq_Gen
+
+} {} {}} C:/Users/dnf12/Desktop/dWatchProject/Clk_gen.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/dnf12/Desktop/dWatchProject/Clk_gen.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity Clk_gen
+-- Compiling architecture Generator of Clk_gen
+
+} {} {}} C:/Users/dnf12/Desktop/dWatchProject/Nbits_Mode.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/dnf12/Desktop/dWatchProject/Nbits_Mode.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity Nbits_Mode
+-- Compiling architecture sel of Nbits_Mode
+
+} {} {}} C:/Users/dnf12/Desktop/dWatchProject/MUX4to1_24bit.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/dnf12/Desktop/dWatchProject/MUX4to1_24bit.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity MUX_4to1_24bit
+-- Compiling architecture selec of MUX_4to1_24bit
+
+} {} {}}
